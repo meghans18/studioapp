@@ -1,3 +1,7 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
 .container {
 	display: inline-block;
 	width: 100%;
@@ -15,7 +19,7 @@
 	border-radius: 0px;
 	background-color: #27a8e0;
 	color: white;
-	font-size: 35px;
+	font-size: 1.5rem;
 	border: .5rem solid #27a8e0;
 }
 
@@ -71,7 +75,7 @@
 }
 
 #side-map p {
-	margin-top: -1rem;
+	margin-top: -1.5rem;
 }
 
 #mainContent {
@@ -102,11 +106,11 @@
 .event{
 	margin-top: 15px;
 	height: 75px;
-	font-size: 14px;
+	font-size: .7rem;
 }
 .event-date{
 	float: left;
-	font-weight: bold;
+	font-weight: 600;
 	clear: both;
 }
 .event-info{
@@ -131,6 +135,7 @@
 .touchscreen-main-map{
 	width: 80%;
 	text-align: center;
+	margin-top: -0.5rem;
 }
 
 /*media queries in css*/
