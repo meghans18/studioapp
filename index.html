@@ -20,7 +20,9 @@
 			<div class="btn-toolbar col-9">
 				<button class="btn col" id="abtBtn">About</button>
 				<button class="btn col" id="projBtn" style="margin: 0px 20px;">Projects</button>
-				<button onclick="window.location.href = '#'" class="btn col">Consult</button>
+				<button onclick="window.location.href = '#'" class="btn col" style="margin: 0px 20px 0px 0px;">Consult</button>
+				<button onclick="window.location.href = '#'" class="btn col">PDH Certificate</button>
+
 			</div>
 		</div>
 		<div class="row col-12">
@@ -30,13 +32,33 @@
 				</div>
 				<div id="side-calendar" class="col-12 text-center">
 					<p>Upcoming Events</p>
+					<div class="event">
+						<div class="event-date col-4">April 10th, 3pm</div>
+						<div class="event-info col-8">
+							<div class="event-title">Share your Scholarship: The Downtown Pop Underground</div><div class="event-location">1015A Main Library (Studio Classroom)</div> <div class="event-description">Professor Kembrew McLeod and Nikki White share The Downtown Pop Underground Online, a companion website to the book of the same title which examines the various art scenes that thrived in downtown New York City from 1958 to 1976.</div>
+						</div>
+					</div>
+					<div class="event">
+						<div class="event-date col-4">April 18th, 5pm</div>
+						<div class="event-info col-8">
+							<div class="event-title">Black like Me: Representations of Biblical Hagar - Nyasha Junior | Temple University</div><div class="event-location">101 Becker Communication Studies Building</div> <div class="event-description"></div>
+						</div>
+					</div>
+					<div class="event">
+						<div class="event-date col-4">April 24th, 4pm</div>
+						<div class="event-info col-8">
+							<div class="event-title">Share Your Scholarship: UK Choral Composers Project</div><div class="event-location">Voxman Choral Rehearsal Room</div> <div class="event-description">Professor Tim Stalter and Nikki White discuss the UK Choral Composers project, highlighting British choral composition from the 20th and 21st centuries, and featuring composer profiles and a database of their compositions and use of texts.</div>
+						</div>
+					</div>
 				</div>
 				<div id="side-text" class="col-12 text-center">
 					<p>Going somewhere?</p>
 				</div>
 				<div id="side-map" class="col-12">
-					<object type="image/svg+xml" data="main-images/floor1.svg"></object>
+					<object id="touchscreen-main-map" type="image/svg+xml" data="main-images/Lib_Floor1.svg"></object>
+						<p><strong>Floor 1</strong></p>
 				</div>
+
 			</div>
 			<div class="col-9" id="mainContent">
 				<div id="carousel">
@@ -64,9 +86,16 @@
 					</div>
 				</div>
 				<div id="aboutText">
-					<p>Blah blah blah blah blah</p>
+					<p>The Digital Scholarship & Publishing Studio collaborates with faculty and students on the digital design, implementation, and circulation of their research. Subscribing to a show more, tell less approach where digital scholarship–particularly the digital humanities–is concerned, the Studio embraces scholarly creativity and encourages interdisciplinary research and multiplatform circulation. In this manner, the Studio helps scholars tailor the presentation and application of their research to a variety of audiences.</p>
+					<p>
+					Housed in the UI Libraries, the Studio oversees the Iowa Digital Library, Iowa Research Online, DIY History, and faculty and graduate student Digital Editions. Given its position in the Libraries, the Studio can shepherd digital projects from their inception to their eventual archival treatments, creating responsible lifespans for these projects and their attendant data.
+				</p>
+				<p>
+					In close connection with other campus resources, including Student Instructional Technology Assistants (SITAs), Iowa Digital Engagement and Learning (IDEAL) and the UI Libraries’ Research & Library Instruction department, the Studio can help instructors thread their research projects into university and community curricula.
+				</p>
 				</div>
 				<div id="projectCards">
+					<h3>Touch Interactive Projects</h3>
 					<div class="card-deck">
 					  <div class="card" onclick="window.location.href = '#'">
 						<img class="card-img-top" src="main-images/brinton-logo.png" alt="Card image cap">
@@ -75,35 +104,45 @@
 						</div>
 					  </div>
 					  <div class="card border border-dark">
-						<img class="card-img-top" src="main-images/pic2.jpg" alt="Card image cap">
+						<img class="card-img-top" src="main-images/whitman.png" alt="Card image cap">
 						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
+						  <h5 class="card-title">Walt Whitman's Anniversary</h5>
 						</div>
 					  </div>
 					</div>
+					<h3>All Projects</h3>
 					<div class="card-deck">
 					  <div class="card">
-						<img class="card-img-top" src="main-images/pic1.jpg" alt="Card image cap">
+						<img class="card-img-top" src="main-images/tractatus.png" alt="Card image cap">
 						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
+							<h5 class="card-title">Tractatus</h5>
+							<p>This interactive version of Ludwig Wittegnstein's philosophical work is built around a subway-style map with the aim of making it easier to navigate the sequences of statements laid out in the book. This is the first Tractatus website to provide a map of the book’s overall structure, and the only one that provides parallel access to the earlier versions of the text in the Prototractatus.</p>
+							<p>Visit <strong>http://tractatus.lib.uiowa.edu/</strong> to see the full project</p>
 						</div>
 					  </div>
 					  <div class="card border border-dark">
-						<img class="card-img-top" src="main-images/pic2.jpg" alt="Card image cap">
+						<img class="card-img-top" src="main-images/sixties.png" alt="Card image cap">
 						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
+						  <h5 class="card-title">Uptight and Laid Back</h5>
+							<p>Uptight & Laid-back: Iowa City in the 1960s, is an ongoing collaborative project developed by University Archivist David McCartney and the Studio. Curated topics pages and an interactive map map invite the public to explore an array of material associated with the campus and the community during this dynamic and turbulent decade.</p>
+							<p>Visit <strong>http://dsps.lib.uiowa.edu/sixties/</strong> to see the full project</p>
 						</div>
 					  </div>
 					  <div class="card border border-dark">
-						<img class="card-img-top" src="main-images/pic2.jpg" alt="Card image cap">
+						<img class="card-img-top" src="main-images/equity.png" alt="Card image cap">
 						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
+						  <h5 class="card-title">Equity at Iowa</h5>
+							<p>The Equity at Iowa project is a collaboration between Judith Pascoe (UI English Professor) and UI Library Researchers to explore the open data found in the Iowa State Employee Salary Book. In honor of Women’s History Month, each business day of March 2016, we will be pairing a digital photo from the Iowa Women’s Archive or University Archives with a bar chart or graph that makes visible gender differences in professional status and salary allocation, as well as patterns of change across time.</p>
+							<p>Visit <strong>https://equityatiowa.tumblr.com/</strong> to see the full project</p>
 						</div>
 					  </div>
 					  <div class="card border border-dark">
-						<img class="card-img-top" src="main-images/pic2.jpg" alt="Card image cap">
+						<img class="card-img-top" src="main-images/coffeezone.jpg" alt="Card image cap">
 						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
+						  <h5 class="card-title">Coffee Zones</h5>
+							<p>This digital archive encompasses the oral histories from coffee pickers, farmers, hacendados (owners of vast farming land), women and teens from the mountainous western area of Puerto Rico known as the coffee zone. This archive is the first to record and preserve the coffee zone’s dialect and oral histories. The collection also include the ways in which women in the coffee industry have handled the micro-changes in their community, and how these changes have played a role in the preservation, and sometimes annihilation, of the coffee zone’s dialect.</p>
+							<p>Visit <strong>http://coffeezone.lib.uiowa.edu/</strong> to see the full project</p>
+
 						</div>
 					  </div>
 					</div>
@@ -131,12 +170,12 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- can use up to 12 columns and group in any way you want -->
-	<!-- 4 grid classes: .col- <> .col-sm- <> .col-md- <> .col-lg- <> .col-xl- (1200px) <> add a # after to show how many 
+	<!-- 4 grid classes: .col- <> .col-sm- <> .col-md- <> .col-lg- <> .col-xl- (1200px) <> add a # after to show how many
 	columns it should take up with that size of screen -->
 	<!-- just use class col to let bootstrap make columns of equal width -->
-	
+
 	<!-- default font-size is 16px, default line-height is 1.5, default font-family is "Helvetica Neue", Helvetica, Arial, sans-serif -->
 	<!-- all <p> elements have margin-top: 0 and margin-bottom: 1rem (16px by default) -->
 	<!-- use .display-1, .display-2, etc to display headers differently -->
@@ -176,7 +215,7 @@
 			$('#aboutText').hide('slow');
             if($('#carousel').css('display') == 'none'){
                 $('#carousel').show('slow');
-            } 
+            }
         })
 		var abtBtn = document.getElementById('abtBtn')
             abtBtn.addEventListener('click', function() {
@@ -184,7 +223,7 @@
 				$('#projectCards').hide('slow');
                 if($('#aboutText').css('display') == 'none'){
                     $('#aboutText').show('slow');
-                } 
+                }
             })
 			var projBtn = document.getElementById('projBtn')
             projBtn.addEventListener('click', function() {
@@ -192,7 +231,7 @@
 				$('#aboutText').hide('slow');
                 if($('#projectCards').css('display') == 'none'){
                     $('#projectCards').show('slow');
-                } 
+                }
             })
 	</script>
 	</body>

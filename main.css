@@ -70,8 +70,23 @@
 #carousel {
 }
 
-#aboutText {
+#aboutText, .event-description {
 	display: none;
+}
+.event{
+	margin-top: 15px;
+	height: 75px;
+	font-size: 14px;
+}
+.event-date{
+	float: left;
+	font-weight: bold;
+	clear: both;
+}
+.event-info{
+	float: left;
+	clear: right;
+	text-align: left;
 }
 
 #projectCards {
@@ -87,10 +102,15 @@
 	display: none;
 }
 
+.touchscreen-main-map{
+	width: 80%;
+	text-align: center;
+}
+
 /*media queries in css*/
 @media only screen and (max-width: 380px) {
-	
-	
+
+
 }
 
 @media only screen and (min-width: 381px) and (max-width: 480px) {
@@ -134,4 +154,4 @@ and (-webkit-min-device-pixel-ratio: 2) {
        (-ms-high-contrast: active) {
     /*IE10+ CSS styles go here*/
 
-}  
+}
