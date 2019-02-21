@@ -17,12 +17,11 @@
 			<div class="col-3">
 				<img src="main-images/logo.png" id="logo" alt="Studio Logo">
 			</div>
-			<div class="btn-toolbar col-9">
+			<div id="btnDiv" class="btn-toolbar col-9">
 				<button class="btn col" id="abtBtn">About</button>
 				<button class="btn col" id="projBtn" style="margin: 0px 20px;">Projects</button>
-				<button onclick="window.location.href = '#'" class="btn col" style="margin: 0px 20px 0px 0px;">Consult</button>
-				<button onclick="window.location.href = '#'" class="btn col">PDH Certificate</button>
-
+				<button class="btn col" id="consultBtn" style="margin: 0px 20px 0px 0px">Consult</button>
+				<button class="btn col" id="pdhBtn">PDH Certificate</button>
 			</div>
 		</div>
 		<div class="row col-12">
@@ -103,14 +102,14 @@
 						  <h5 class="card-title">Brinton</h5>
 						</div>
 					  </div>
-					  <div class="card border border-dark">
+					  <div class="card">
 						<img class="card-img-top" src="main-images/whitman.png" alt="Card image cap">
 						<div class="card-body">
 						  <h5 class="card-title">Walt Whitman's Anniversary</h5>
 						</div>
 					  </div>
 					</div>
-					<h3>All Projects</h3>
+					<h3>Selected Projects</h3>
 					<div class="card-deck">
 					  <div class="card">
 						<img class="card-img-top" src="main-images/tractatus.png" alt="Card image cap">
@@ -120,7 +119,7 @@
 							<p>Visit <strong>http://tractatus.lib.uiowa.edu/</strong> to see the full project</p>
 						</div>
 					  </div>
-					  <div class="card border border-dark">
+					  <div class="card">
 						<img class="card-img-top" src="main-images/sixties.png" alt="Card image cap">
 						<div class="card-body">
 						  <h5 class="card-title">Uptight and Laid Back</h5>
@@ -128,7 +127,7 @@
 							<p>Visit <strong>http://dsps.lib.uiowa.edu/sixties/</strong> to see the full project</p>
 						</div>
 					  </div>
-					  <div class="card border border-dark">
+					  <div class="card">
 						<img class="card-img-top" src="main-images/equity.png" alt="Card image cap">
 						<div class="card-body">
 						  <h5 class="card-title">Equity at Iowa</h5>
@@ -136,7 +135,7 @@
 							<p>Visit <strong>https://equityatiowa.tumblr.com/</strong> to see the full project</p>
 						</div>
 					  </div>
-					  <div class="card border border-dark">
+					  <div class="card">
 						<img class="card-img-top" src="main-images/coffeezone.jpg" alt="Card image cap">
 						<div class="card-body">
 						  <h5 class="card-title">Coffee Zones</h5>
@@ -146,26 +145,12 @@
 						</div>
 					  </div>
 					</div>
-					<div class="card-deck">
-					  <div class="card">
-						<img class="card-img-top" src="main-images/pic1.jpg" alt="Card image cap">
-						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
-						</div>
-					  </div>
-					  <div class="card border border-dark">
-						<img class="card-img-top" src="main-images/pic2.jpg" alt="Card image cap">
-						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
-						</div>
-					  </div>
-					  <div class="card border border-dark">
-						<img class="card-img-top" src="main-images/pic2.jpg" alt="Card image cap">
-						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
-						</div>
-					  </div>
-					</div>
+				</div>
+				<div id="consultText">
+					<p>consult page</p>
+				</div>
+				<div id="pdhText">
+					<p>pdh certificate page</p>
 				</div>
 			</div>
 		</div>
@@ -209,11 +194,18 @@
 	  // Update the time display
 	  document.getElementById("timeString").innerHTML = currentTimeString;
 	}
+	
 		var logoBtn = document.getElementById('logo')
         logoBtn.addEventListener('click', function() {
 			$('#projectCards').hide('slow');
 			$('#aboutText').hide('slow');
+			$('#consultText').hide('slow');
+			$('#pdhText').hide('slow');
             if($('#carousel').css('display') == 'none'){
+				$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+				$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+				$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+				$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
                 $('#carousel').show('slow');
             }
         })
@@ -221,7 +213,13 @@
             abtBtn.addEventListener('click', function() {
                 $('#carousel').hide('slow');
 				$('#projectCards').hide('slow');
+				$('#consultText').hide('slow');
+				$('#pdhText').hide('slow');
                 if($('#aboutText').css('display') == 'none'){
+					$('#abtBtn').css({"background-color": "white", "color": "#27a8e0"});
+					$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
                     $('#aboutText').show('slow');
                 }
             })
@@ -229,8 +227,42 @@
             projBtn.addEventListener('click', function() {
                 $('#carousel').hide('slow');
 				$('#aboutText').hide('slow');
+				$('#consultText').hide('slow');
+				$('#pdhText').hide('slow');
                 if($('#projectCards').css('display') == 'none'){
+					$('#projBtn').css({"background-color": "white", "color": "#27a8e0"});
+					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
                     $('#projectCards').show('slow');
+                }
+            })
+			var consultBtn = document.getElementById('consultBtn')
+            consultBtn.addEventListener('click', function() {
+                $('#carousel').hide('slow');
+				$('#aboutText').hide('slow');
+				$('#projectCards').hide('slow');
+				$('#pdhText').hide('slow');
+                if($('#consultText').css('display') == 'none'){
+					$('#consultBtn').css({"background-color": "white", "color": "#27a8e0"});
+					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
+                    $('#consultText').show('slow');
+                }
+            })
+			var pdhBtn = document.getElementById('pdhBtn')
+            pdhBtn.addEventListener('click', function() {
+                $('#carousel').hide('slow');
+				$('#aboutText').hide('slow');
+				$('#projectCards').hide('slow');
+				$('#consultText').hide('slow');
+                if($('#pdhText').css('display') == 'none'){
+					$('#pdhBtn').css({"background-color": "white", "color": "#27a8e0"});
+					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+                    $('#pdhText').show('slow');
                 }
             })
 	</script>

@@ -13,9 +13,17 @@
 
 .btn {
 	border-radius: 0px;
-	background-color: #0099cc;
+	background-color: #27a8e0;
 	color: white;
-	font-size: 40px;
+	font-size: 35px;
+	border: .5rem solid #27a8e0;
+}
+
+#btnContainer.active {
+	background-color: #00bfff;
+	color: white;
+	border: none;
+	outline: none;
 }
 
 #logo {
@@ -58,8 +66,12 @@
 }
 
 #side-map {
-	background-color: #00bfff;
+	background-color: #27a8e0;
 	height: 38%;
+}
+
+#side-map p {
+	margin-top: -1rem;
 }
 
 #mainContent {
@@ -70,7 +82,21 @@
 #carousel {
 }
 
+.btn:focus {
+	outline:none;
+	box-shadow:none;
+}
+.btn:hover {
+	color: white;
+}
+
 #aboutText, .event-description {
+	display: none;
+}
+#consultText {
+	display: none;
+}
+#pdhText {
 	display: none;
 }
 .event{
