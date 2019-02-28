@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en">
-    <head>
+	<head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
 
         <!-- Optional JavaScript -->
@@ -25,46 +25,23 @@
         <script>if (window.module) module = window.module;</script>
         <title>Brinton Entertainment</title>
     </head>
-    <body>
-        <div id="meet_man">
-            <a href="index.html"><img id="icon" src="icon.png" width="75" height="75"></a>
-            <div class="jumbotron" style="margin-top: -150px;">
-                <h1 id="curved-5">BRINTON</h1>
-                <h2 id="curved-6">ENTERTAINMENT</h2>
-                <h3>CO.</h3>
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-                <div class="line4"></div>
-                <div class="line5"></div>
-                <div class="line6"></div>
-                <div id="about-content">
-                    <p class="about-title">THE EMERGENCE OF EARLY FILM IN AMERICA</p>
-                    <p class="about-gallery-dates">Visit us in the Main Library Gallery April 23 – August 3</p>
-                    <p id="meet_text">The Brinton Collection contains films, slides, projectors, papers, and other documents from the life and career of William Franklin Brinton of Washington, IA. Brinton was an itinerant showman, travelling from Texas to Minnesota to project slides, film, and stage other entertainments during the years 1895-1909. He was also the manager of the Graham Opera House in Washington, which is still an active movie theater today and was recently declared the longest continually operating cinema in the world. Brinton was an eccentric and energetic individual, and the collection not only preserves some of the earliest commercially available film, it also contains material related to Brinton's experimental interests, such as his passion for designing flying machines long before human flight became a reality.</p>
-                </div>
-            </div>
-        </div>
-
-        <script>
-		new CircleType(document.getElementById('curved-5')).radius(900);
-        new CircleType(document.getElementById('curved-6')).radius(700);
-            /*var ipcRenderer = require('electron').ipcRenderer;
-            $(document).ready(function(){
-
-
-                new CircleType(document.getElementById('curved-5')).radius(900);
-                new CircleType(document.getElementById('curved-6')).radius(700);
-
-                document.getElementById('icon').onclick = function() {
-                    ipcRenderer.send('closeMeet');
-                }
-
-            });
-			
-			window.onclick = function() {
-				ipcRenderer.send('reset');
-			}*/
-        </script>
-    </body>
+	<body>
+		<a href="index.html"><img id="icon" src="icon.png" width="75" height="75"></a>
+		<div class="container-fluid text-center">
+			<div id="brintonLogo">
+				<h1 id="curved-1">BRINTON</h1>
+				<h2 id="curved-2">ENTERTAINMENT</h2>
+				<h3>CO.</h3>
+			</div>
+		</div>
+		<div class="row justify-content-center" id="galleryInfo">
+			<h4 class="col-12 text-center">THE EMERGENCE OF EARLY FILM IN AMERICA</h4>
+            <p class="col-6 text-center">The Brinton Collection contains films, slides, projectors, papers, and other documents from the life and career of William Franklin Brinton of Washington, IA. Brinton was an itinerant showman, travelling from Texas to Minnesota to project slides, film, and stage other entertainments during the years 1895-1909. He was also the manager of the Graham Opera House in Washington, which is still an active movie theater today and was recently declared the longest continually operating cinema in the world. Brinton was an eccentric and energetic individual, and the collection not only preserves some of the earliest commercially available film, it also contains material related to Brinton's experimental interests, such as his passion for designing flying machines long before human flight became a reality.</p>
+		</div>
+		
+		<script>
+			new CircleType(document.getElementById('curved-1')).radius(700);
+			new CircleType(document.getElementById('curved-2')).radius(500);
+		</script>
+	</body>
 </html>

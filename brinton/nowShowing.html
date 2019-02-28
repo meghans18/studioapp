@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="en">
-    <head>
+	<head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
 
         <!-- Optional JavaScript -->
-        <!-- jQuery first -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
@@ -22,35 +22,21 @@
         <link rel="stylesheet" href="owl.theme.default.min.css">
         <script src="owl.carousel.min.js"></script>
         <script src="circletype.min.js"></script>
-
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-		<script src="jquery.ui.touch-punch.min.js"></script>
-
         <script>if (window.module) module = window.module;</script>
         <title>Brinton Entertainment</title>
     </head>
-    <body>
-        <div id="now_showing">
-            <a href="index.html"><img id="icon" src="icon.png" width="75" height="75"></a>
-            <div class="jumbotron" style="margin-top: -150px;">
-                <h1 id="curved-3">BRINTON</h1>
-                <h2 id="curved-4">ENTERTAINMENT</h2>
-                <h3>CO.</h3>
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-                <div class="line4"></div>
-                <div class="line5"></div>
-                <div class="line6"></div>
-            </div>
-            <div class="container">
-                <h2 class="display-4">NOW SHOWING</h2>
-            </div>
-			<!-- makes up the main part of the carousel that shows at all times -->
-            <div class="owl-carousel owl-theme">
+	<body>
+		<a href="index.html"><img id="icon" src="icon.png" width="75" height="75"></a>
+		<div class="container-fluid text-center">
+			<div id="brintonLogo">
+				<h1 id="curved-1">BRINTON</h1>
+				<h2 id="curved-2">ENTERTAINMENT</h2>
+				<h3>CO.</h3>
+			</div>
+		</div>
+		<div class="row justify-content-center" id="nowShowing">
+			<h2>NOW SHOWING</h2>
+			<div class="owl-carousel owl-theme">
               <div class= "item lanternA_popup_open"><img id="image" src="images/lanternA%20(1).jpg" /></div>
               <div class= "item lanternB_popup_open"><img id="image" src="images/lanternB%20(1).jpg" /></div>
 			  <div class= "item lanternC_popup_open"><img id="image" src="images/lanternC%20(1).jpg" /></div>
@@ -59,9 +45,8 @@
 			  <div class= "item lanternF_popup_open"><img id="image" src="images/lanternF%20(1).jpg" /></div>
 			  <div class= "item lanternG_popup_open"><img id="image" src="images/lanternG%20(1).jpg" /></div>
             </div>
-
-			<!-- one popup associated with each element of the carousel, displays more images -->
-            <div class="popups" id="lanternA_popup">
+			
+			<div class="popups" id="lanternA_popup">
 			<p>TAP IMAGE FOR MORE</p>
               <img width="auto" height="25%" class="clickSwitch" id="A" src="images/lanternA%20(1).jpg">
             </div>
@@ -89,50 +74,46 @@
 			<p>TAP IMAGE FOR MORE</p>
               <img width="auto" height="25%" class="clickSwitch" id="G" src="images/lanternG%20(1).jpg">
             </div>
-        </div>
-
-        <script>
-		//object with the length of each set of images
-		var setNum = {
-			'A':2,
-			'B':5,
-			'C':13,
-			'D':11,
-			'E':8,
-			'F':12,
-			'G':14,
-		}
+		</div>
 		
-        //$("#image").fadeOut(5000, function() {
-        /*$(".clickSwitch").draggable({
-			containment: 'window',
-		});*/
+		<script>
+			var setNum = {
+				'A':2,
+				'B':5,
+				'C':13,
+				'D':11,
+				'E':8,
+				'F':12,
+				'G':14,
+			}
+			
+			//$("#image").fadeOut(5000, function() {
+			/*$(".clickSwitch").draggable({
+				containment: 'window',
+			});*/
+			
+			var i=2;
+			//each popup has the class clickSwitch so this works for each popup
+			$(".clickSwitch").click(function() {
+				var setLet = this.id;
+				//this if/else statement dynamically changes the image displayed in the popup
+				if (i>setNum[setLet]) {
+					i=1;
+					$('#'+setLet).attr("src", 'images/lantern'+setLet+'%20('+i.toString()+').jpg')
+					i++;
+				}
+				else {
+					$('#'+setLet).attr("src", 'images/lantern'+setLet+'%20('+i.toString()+').jpg')
+					i++;
+				}
+			});
+			
+			//add code to go back to home page
+		</script>
 		
-		var i=2;
-		//each popup has the class clickSwitch so this works for each popup
-		$(".clickSwitch").click(function() {
-			var setLet = this.id;
-			//this if/else statement dynamically changes the image displayed in the popup
-			if (i>setNum[setLet]) {
-				i=1;
-				$('#'+setLet).attr("src", 'images/lantern'+setLet+'%20('+i.toString()+').jpg')
-				i++;
-			}
-			else {
-				$('#'+setLet).attr("src", 'images/lantern'+setLet+'%20('+i.toString()+').jpg')
-				i++;
-			}
-		});
-		//});
-        </script>
-
-        <script>
+		<script>
             //var ipcRenderer = require('electron').ipcRenderer;
             $(document).ready(function(){
-
-                //var danceVid = document.getElementById('dance')
-                //var video1 = document.getElementById('video1')
-
 				//initializes the carousel
                 $('.owl-carousel').owlCarousel({
                     nav:false,
@@ -185,21 +166,10 @@
 					$('#G').attr("src", 'images/lanternG%20(1).jpg')
                   }
                 });
-                
-
-                //danceVid.onended = function(){$('#dance_popup').popup('hide')}
-
-                new CircleType(document.getElementById('curved-3')).radius(900);
-                new CircleType(document.getElementById('curved-4')).radius(700);
-
-                /*document.getElementById('icon').onclick = function() {
-                    ipcRenderer.send('closeShowing');
-                }*/
             });
 			
-			/*window.onclick = function() {
-				ipcRenderer.send('reset');
-			}*/
+			new CircleType(document.getElementById('curved-1')).radius(700);
+			new CircleType(document.getElementById('curved-2')).radius(500);
         </script>
-    </body>
+	</body>
 </html>
