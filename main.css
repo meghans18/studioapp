@@ -97,6 +97,10 @@ body {
 #aboutText, .event-description {
 	display: none;
 }
+#aboutText{
+	background-image:url('main-images/about-background.jpg');
+	height: 100%;
+}
 #consultText {
 	display: none;
 }
