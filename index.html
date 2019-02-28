@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -17,12 +18,11 @@
 			<div class="col-3">
 				<img src="main-images/logo.png" id="logo" alt="Studio Logo">
 			</div>
-			<div class="btn-toolbar col-9">
+			<div id="btnDiv" class="btn-toolbar col-9">
 				<button class="btn col" id="abtBtn">About</button>
 				<button class="btn col" id="projBtn" style="margin: 0px 20px;">Projects</button>
-				<button onclick="window.location.href = '#'" class="btn col" style="margin: 0px 20px 0px 0px;">Consult</button>
-				<button onclick="window.location.href = '#'" class="btn col">PDH Certificate</button>
-
+				<button class="btn col" id="consultBtn" style="margin: 0px 20px 0px 0px">Consult</button>
+				<button class="btn col" id="pdhBtn">PDH Certificate</button>
 			</div>
 		</div>
 		<div class="row col-12">
@@ -103,14 +103,14 @@
 						  <h5 class="card-title">Brinton</h5>
 						</div>
 					  </div>
-					  <div class="card border border-dark">
+					  <div class="card">
 						<img class="card-img-top" src="main-images/whitman.png" alt="Card image cap">
 						<div class="card-body">
 						  <h5 class="card-title">Walt Whitman's Anniversary</h5>
 						</div>
 					  </div>
 					</div>
-					<h3>All Projects</h3>
+					<h3>Selected Projects</h3>
 					<div class="card-deck">
 					  <div class="card">
 						<img class="card-img-top" src="main-images/tractatus.png" alt="Card image cap">
@@ -120,7 +120,7 @@
 							<p>Visit <strong>http://tractatus.lib.uiowa.edu/</strong> to see the full project</p>
 						</div>
 					  </div>
-					  <div class="card border border-dark">
+					  <div class="card">
 						<img class="card-img-top" src="main-images/sixties.png" alt="Card image cap">
 						<div class="card-body">
 						  <h5 class="card-title">Uptight and Laid Back</h5>
@@ -128,7 +128,7 @@
 							<p>Visit <strong>http://dsps.lib.uiowa.edu/sixties/</strong> to see the full project</p>
 						</div>
 					  </div>
-					  <div class="card border border-dark">
+					  <div class="card">
 						<img class="card-img-top" src="main-images/equity.png" alt="Card image cap">
 						<div class="card-body">
 						  <h5 class="card-title">Equity at Iowa</h5>
@@ -136,7 +136,7 @@
 							<p>Visit <strong>https://equityatiowa.tumblr.com/</strong> to see the full project</p>
 						</div>
 					  </div>
-					  <div class="card border border-dark">
+					  <div class="card">
 						<img class="card-img-top" src="main-images/coffeezone.jpg" alt="Card image cap">
 						<div class="card-body">
 						  <h5 class="card-title">Coffee Zones</h5>
@@ -146,26 +146,18 @@
 						</div>
 					  </div>
 					</div>
-					<div class="card-deck">
-					  <div class="card">
-						<img class="card-img-top" src="main-images/pic1.jpg" alt="Card image cap">
-						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
-						</div>
-					  </div>
-					  <div class="card border border-dark">
-						<img class="card-img-top" src="main-images/pic2.jpg" alt="Card image cap">
-						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
-						</div>
-					  </div>
-					  <div class="card border border-dark">
-						<img class="card-img-top" src="main-images/pic2.jpg" alt="Card image cap">
-						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
-						</div>
-					  </div>
-					</div>
+				</div>
+				<div id="consultText">
+					<p>consult page</p>
+				</div>
+				<div id="pdhText">
+					<p>The Public Digital Humanities certificate is a dynamic and creative hands-on, 12-semester-hour program that helps graduate students develop digital scholarly skills for use within and beyond academia. The certificate is available to graduate degree students across the University—regardless of their familiarity with digital humanities—and provides a foundation in theories, methods, and major debates in DH. The program provides small classroom, lab, and individually-guided training as students explore the expansive nature of digital humanities.<br><br>
+
+The flexibility of the certificate curriculum helps students, their advisors, and department heads work together to identify an effective plan of study for students en route to their degree objective. Students may pursue basic training in an array of digital methods or choose to focus their efforts in a particular area of digital practice: GIS, data visualization, textual analysis, podcasting, digital archiving, and digital exhibits.  We encourage those pursuing the certificate to take DH courses in their home departments or in cognate fields in order to deepen and diversify their research, pedagogical, and public humanities approaches.<br><br>
+
+If you have questions about the certificate you can contact Leah Gehlsen Morlan, the Studio’s Program Manager; Professor Deborah Whaley, Senior Scholar for Digital Arts & Humanities Research; or Tom Keegan, Head, Digital Scholarship & Publishing Studio.<br><br>
+
+Ongoing news and updates about the certificate and its students can be found on the Studio blog. And certificate students are invited to join the Studio’s mailing list to stay up-to-date on the latest workshops, fellowships, grant opportunities, and more.</p>
 				</div>
 			</div>
 		</div>
@@ -209,11 +201,18 @@
 	  // Update the time display
 	  document.getElementById("timeString").innerHTML = currentTimeString;
 	}
+	
 		var logoBtn = document.getElementById('logo')
         logoBtn.addEventListener('click', function() {
 			$('#projectCards').hide('slow');
 			$('#aboutText').hide('slow');
+			$('#consultText').hide('slow');
+			$('#pdhText').hide('slow');
             if($('#carousel').css('display') == 'none'){
+				$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+				$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+				$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+				$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
                 $('#carousel').show('slow');
             }
         })
@@ -221,7 +220,13 @@
             abtBtn.addEventListener('click', function() {
                 $('#carousel').hide('slow');
 				$('#projectCards').hide('slow');
+				$('#consultText').hide('slow');
+				$('#pdhText').hide('slow');
                 if($('#aboutText').css('display') == 'none'){
+					$('#abtBtn').css({"background-color": "white", "color": "#27a8e0"});
+					$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
                     $('#aboutText').show('slow');
                 }
             })
@@ -229,8 +234,42 @@
             projBtn.addEventListener('click', function() {
                 $('#carousel').hide('slow');
 				$('#aboutText').hide('slow');
+				$('#consultText').hide('slow');
+				$('#pdhText').hide('slow');
                 if($('#projectCards').css('display') == 'none'){
+					$('#projBtn').css({"background-color": "white", "color": "#27a8e0"});
+					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
                     $('#projectCards').show('slow');
+                }
+            })
+			var consultBtn = document.getElementById('consultBtn')
+            consultBtn.addEventListener('click', function() {
+                $('#carousel').hide('slow');
+				$('#aboutText').hide('slow');
+				$('#projectCards').hide('slow');
+				$('#pdhText').hide('slow');
+                if($('#consultText').css('display') == 'none'){
+					$('#consultBtn').css({"background-color": "white", "color": "#27a8e0"});
+					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
+                    $('#consultText').show('slow');
+                }
+            })
+			var pdhBtn = document.getElementById('pdhBtn')
+            pdhBtn.addEventListener('click', function() {
+                $('#carousel').hide('slow');
+				$('#aboutText').hide('slow');
+				$('#projectCards').hide('slow');
+				$('#consultText').hide('slow');
+                if($('#pdhText').css('display') == 'none'){
+					$('#pdhBtn').css({"background-color": "white", "color": "#27a8e0"});
+					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+					$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+                    $('#pdhText').show('slow');
                 }
             })
 	</script>
