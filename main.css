@@ -40,7 +40,7 @@ body {
 #side-box {
 	overflow: hidden;
 	background-color: black;
-	height:875px;
+	height:925px;
 }
 
 #side-time p {
@@ -80,7 +80,7 @@ body {
 
 #mainContent {
 	overflow-y: auto;
-	height: 875px;
+	height: 925px;
 }
 
 #carousel {
