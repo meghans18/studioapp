@@ -1,0 +1,22 @@
+{
+  "name": "studioapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meghans18/studioapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meghans18/studioapp/issues"
+  },
+  "homepage": "https://github.com/meghans18/studioapp#readme",
+  "devDependencies": {
+    "electron": "^4.0.6"
+  }
+}
