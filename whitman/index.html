@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script>if (window.module) module = window.module;</script>
+        <title>Walt Whitman</title>
+    </head>
+    <body>
+        <div class="container-fluid" style="height: 100%; width: 100%; padding: .5rem;">
+            <div class="borderStyle container-fluid">
+                <div class="borderStyle container-fluid" style="border: 10px solid #8E813D">
+                    <div class="borderStyle container-fluid">
+                        <div class="row">
+                            <div class="col-7 justify-content-center text-center">
+                                <img id="signature" src="WWSignature_Silver.png" class="col-12">
+                                <img src="Silver_Dividing_Decoration.svg" class="col-10">
+                                <div class="btn-group-vertical col-6">
+                                    <button id="abtBtn" class="btn">About the Exhibit</button>
+                                    <button id="saiBtn" class="btn" style="margin-top: 2rem;">Scholarship at Iowa</button>
+                                    <button id="mapsBtn" class="btn" style="margin-top: 2rem;">The Maps</button>
+                                    <button id="facesBtn" class="btn" style="margin-top: 2rem;">Faces of Whitman</button>
+                                </div>
+                            </div>
+                            <!-- div containing all the different content displayed on the right side -->
+                            <div class="col-5">
+                                
+                                <!-- div corresponding to the About the Exhibit button -->
+                                <div id="aboutText">
+                                    
+                                </div>
+                                
+                                <!-- div corresponding to the Scholarship at Iowa button -->
+                                <div id="scholarship">
+                                
+                                </div>
+                                
+                                <!-- div corresponding to the The Maps button -->
+                                <div id="maps">
+                                
+                                </div>
+                                
+                                <!-- div corresponding to the Faces of Whitman button -->
+                                <div id="faces">
+                                    <img id="faceImg" src="Gold_Whitman_Face1.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var abtBtn = document.getElementById('abtBtn');
+            abtBtn.addEventListener('click', function() {
+                $('#scholarship').hide('slow')
+                $('#maps').hide('slow')
+                $('#faces').hide('slow')
+                if ($('#aboutText').css('display') == 'none') {
+                    $('#abtBtn').css({"background-color": "#C0C0C0", "color": "black"});
+                    $('#saiBtn').css({"background-color": "#8E813D", "color": "#C0C0C0"});
+                    $('#mapsBtn').css({"background-color": "#8E813D", "color": "#C0C0C0"});
+                    $('#facesBtn').css({"background-color": "#8E813D", "color": "#C0C0C0"});
+                    $('#aboutText').show('slow');
+                }
+            })
+            
+            var saiBtn = document.getElementById('saiBtn');
+            saiBtn.addEventListener('click', function() {
+                $('#aboutText').hide('slow')
+                $('#maps').hide('slow')
+                $('#faces').hide('slow')
+                if ($('#scholarship').css('display') == 'none') {
+                    $('#saiBtn').css({"background-color": "#C0C0C0", "color": "black"});
+                    $('#abtBtn').css({"background-color": "#8E813D", "color": "#C0C0C0"});
+                    $('#mapsBtn').css({"background-color": "#8E813D", "color": "#C0C0C0"});
+                    $('#facesBtn').css({"background-color": "#8E813D", "color": "#C0C0C0"});
+                    $('#scholarship').show('slow');
+                }
+            })
+            
+            var facesBtn = document.getElementById('facesBtn');
+            facesBtn.addEventListener('click', function() {
+                $('#aboutText').hide('slow')
+                $('#scholarship').hide('slow')
+                $('#maps').hide('slow')
+                if ($('#faces').css('display') == 'none') {
+                    $('#facesBtn').css({"background-color": "#C0C0C0", "color": "black"});
+                    $('#abtBtn').css({"background-color": "#8E813D", "color": "#C0C0C0"});
+                    $('#saiBtn').css({"background-color": "#8E813D", "color": "#C0C0C0"});
+                    $('#mapsBtn').css({"background-color": "#8E813D", "color": "#C0C0C0"});
+                    $('#faces').show('slow');
+                }
+            })
+        </script>
+    </body>
+</html>
