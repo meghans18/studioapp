@@ -44,16 +44,19 @@
 		<div class="row justify-content-center">
 			<div id="embed-wrapper">
             <div id="home-video-popup">
-                <iframe id="home-video" class="pop_item" width="600" height="315" src="https://www.youtube.com/embed/9sE2i7S1P_g?rel=0&loop=1&controls=0&showinfo=0&autoplay=1&disablekb=1&modestbranding=1&disablekb=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-            </div>
+							<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0BoUCnsqqvM?autoplay=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			Deprecated
+							<iframe id="home-video" class="pop_item" width="600" height="315" src="https://www.youtube.com/embed/9sE2i7S1P_g?controls=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+-->
+						</div>
           </div>
 		</div>
-		
+
 		<script>
 			new CircleType(document.getElementById('curved-1')).radius(700);
 			new CircleType(document.getElementById('curved-2')).radius(500);
-			
-			var tag = document.createElement('script');
+
+			/*var tag = document.createElement('script');
             tag.src = "https://www.youtube.com/iframe_api";
             var firstScriptTag = document.getElementsByTagName('script')[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -71,7 +74,7 @@
             				 	}
             	});
             }
-			
+						*/
 			//add code to go back to home page
 		</script>
 	</body>

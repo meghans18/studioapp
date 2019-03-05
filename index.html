@@ -25,7 +25,7 @@
 			<div id="btnDiv" class="btn-toolbar col-9">
 				<button class="btn col" id="abtBtn">About</button>
 				<button class="btn col" id="projBtn" style="margin: 0px 20px;">Projects</button>
-				<button class="btn col" id="consultBtn" style="margin: 0px 20px 0px 0px">Consult</button>
+				<!--<button class="btn col" id="consultBtn" style="margin: 0px 20px 0px 0px">Consult</button>-->
 				<button class="btn col" id="pdhBtn">PDH Certificate</button>
 			</div>
 		</div>
@@ -73,10 +73,10 @@
 					  </ol>
 					  <div class="carousel-inner">
 						<div class="carousel-item active">
-						  <img class="d-block w-100" src="main-images/brinton-marquee.jpg" alt="Second slide" onclick="window.location.href = 'brinton/index.html'">
+						  <img class="d-block w-100" src="main-images/brintonMain.png" alt="Second slide" onclick="window.location.href = 'brinton/nowShowing.html'">
 						</div>
 						<div class="carousel-item">
-						  <img class="d-block w-100" src="main-images/whitmanTest.png" alt="Third slide">
+						  <img class="d-block w-100" src="main-images/whitmanMain.png" alt="Third slide">
 						</div>
 					  </div>
 					  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -89,19 +89,26 @@
 					  </a>
 					</div>
 				</div>
-				<div id="aboutText">
-					<p>The Digital Scholarship & Publishing Studio collaborates with faculty and students on the digital design, implementation, and circulation of their research. Subscribing to a show more, tell less approach where digital scholarship–particularly the digital humanities–is concerned, the Studio embraces scholarly creativity and encourages interdisciplinary research and multiplatform circulation. In this manner, the Studio helps scholars tailor the presentation and application of their research to a variety of audiences.</p>
-					<p>
-					Housed in the UI Libraries, the Studio oversees the Iowa Digital Library, Iowa Research Online, DIY History, and faculty and graduate student Digital Editions. Given its position in the Libraries, the Studio can shepherd digital projects from their inception to their eventual archival treatments, creating responsible lifespans for these projects and their attendant data.
-				</p>
-				<p>
-					In close connection with other campus resources, including Student Instructional Technology Assistants (SITAs), Iowa Digital Engagement and Learning (IDEAL) and the UI Libraries’ Research & Library Instruction department, the Studio can help instructors thread their research projects into university and community curricula.
-				</p>
+				<div id="about-text-container">
+					<div id="about-text">
+						<h2>The Digital Scholarship & Publishing Studio</h2>
+							<p>The Studio collaborates with faculty and students on the digital design, implementation, and circulation of their research. Subscribing to a show more, tell less approach where digital scholarship–particularly the digital humanities–is concerned, the Studio embraces scholarly creativity and encourages interdisciplinary research and multiplatform circulation. In this manner, the Studio helps scholars tailor the presentation and application of their research to a variety of audiences.</p>
+							<p>
+							Housed in the UI Libraries, the Studio oversees the Iowa Digital Library, Iowa Research Online, DIY History, and faculty and graduate student Digital Editions. Given its position in the Libraries, the Studio can shepherd digital projects from their inception to their eventual archival treatments, creating responsible lifespans for these projects and their attendant data.
+						</p>
+						<p>
+							In close connection with other campus resources, including Student Instructional Technology Assistants (SITAs), Iowa Digital Engagement and Learning (IDEAL) and the UI Libraries’ Research & Library Instruction department, the Studio can help instructors thread their research projects into university and community curricula.
+						</p>
+						<h3>Consult with us</h3>
+						<p>Digital Scholarship & Publishing Studio<br>
+						319-384-0925</br>
+						thestudio@uiowa.edu</p>
+					</div>
 				</div>
 				<div id="projectCards">
 					<h3>Touch Interactive Projects</h3>
 					<div class="card-deck">
-					  <div class="card" onclick="window.location.href = 'brinton/index.html'">
+					  <div class="card" onclick="window.location.href = 'brinton/nowShowing.html'">
 						<img class="card-img-top" src="main-images/brinton-marquee.jpg" alt="Card image cap">
 						<div class="card-body">
 						  <h5 class="card-title">Brinton</h5>
@@ -151,19 +158,18 @@
 					  </div>
 					</div>
 				</div>
+				<!--
 				<div id="consultText">
-					<p>Digital Scholarship & Publishing Studio</p>
-					<p>319-384-0925</p>
-					<p>thestudio@uiowa.edu</p>
 				</div>
-				<div id="pdhText">
-					<p>The Public Digital Humanities certificate is a dynamic and creative hands-on, 12-semester-hour program that helps graduate students develop digital scholarly skills for use within and beyond academia. The certificate is available to graduate degree students across the University—regardless of their familiarity with digital humanities—and provides a foundation in theories, methods, and major debates in DH. The program provides small classroom, lab, and individually-guided training as students explore the expansive nature of digital humanities.<br><br>
-
-The flexibility of the certificate curriculum helps students, their advisors, and department heads work together to identify an effective plan of study for students en route to their degree objective. Students may pursue basic training in an array of digital methods or choose to focus their efforts in a particular area of digital practice: GIS, data visualization, textual analysis, podcasting, digital archiving, and digital exhibits.  We encourage those pursuing the certificate to take DH courses in their home departments or in cognate fields in order to deepen and diversify their research, pedagogical, and public humanities approaches.<br><br>
-
-If you have questions about the certificate you can contact Leah Gehlsen Morlan, the Studio’s Program Manager; Professor Deborah Whaley, Senior Scholar for Digital Arts & Humanities Research; or Tom Keegan, Head, Digital Scholarship & Publishing Studio.<br><br>
-
-Ongoing news and updates about the certificate and its students can be found on the Studio blog. And certificate students are invited to join the Studio’s mailing list to stay up-to-date on the latest workshops, fellowships, grant opportunities, and more.</p>
+			-->
+				<div id="pdh-text-container">
+					<div id="pdh-text">
+						<h2>The Public Digital Humanities</h2>
+					<p>The PDH certificate is a dynamic and creative hands-on, 12-semester-hour program that helps graduate students develop digital scholarly skills for use within and beyond academia. The certificate is available to graduate degree students across the University—regardless of their familiarity with digital humanities—and provides a foundation in theories, methods, and major debates in DH. The program provides small classroom, lab, and individually-guided training as students explore the expansive nature of digital humanities.</p>
+					<p>The flexibility of the certificate curriculum helps students, their advisors, and department heads work together to identify an effective plan of study for students en route to their degree objective. Students may pursue basic training in an array of digital methods or choose to focus their efforts in a particular area of digital practice: GIS, data visualization, textual analysis, podcasting, digital archiving, and digital exhibits.  We encourage those pursuing the certificate to take DH courses in their home departments or in cognate fields in order to deepen and diversify their research, pedagogical, and public humanities approaches.</p>
+					<p>If you have questions about the certificate you can contact Leah Gehlsen Morlan, the Studio’s Program Manager; Professor Deborah Whaley, Senior Scholar for Digital Arts & Humanities Research; or Tom Keegan, Head, Digital Scholarship & Publishing Studio.</p>
+					<p>Ongoing news and updates about the certificate and its students can be found on the Studio blog. And certificate students are invited to join the Studio’s mailing list to stay up-to-date on the latest workshops, fellowships, grant opportunities, and more.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -211,9 +217,9 @@ Ongoing news and updates about the certificate and its students can be found on 
 		var logoBtn = document.getElementById('logo')
         logoBtn.addEventListener('click', function() {
 			$('#projectCards').hide('slow');
-			$('#aboutText').hide('slow');
-			$('#consultText').hide('slow');
-			$('#pdhText').hide('slow');
+			$('#about-text-container').hide('slow');
+			//$('#consultText').hide('slow');
+			$('#pdh-text-container').hide('slow');
             if($('#carousel').css('display') == 'none'){
 				$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
 				$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
@@ -226,22 +232,22 @@ Ongoing news and updates about the certificate and its students can be found on 
             abtBtn.addEventListener('click', function() {
                 $('#carousel').hide('slow');
 				$('#projectCards').hide('slow');
-				$('#consultText').hide('slow');
-				$('#pdhText').hide('slow');
-                if($('#aboutText').css('display') == 'none'){
+				//$('#consultText').hide('slow');
+				$('#pdh-text-container').hide('slow');
+                if($('#about-text-container').css('display') == 'none'){
 					$('#abtBtn').css({"background-color": "white", "color": "#27a8e0"});
 					$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
 					$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
 					$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
-                    $('#aboutText').show('slow');
+                    $('#about-text-container').show('slow');
                 }
             })
 			var projBtn = document.getElementById('projBtn')
             projBtn.addEventListener('click', function() {
                 $('#carousel').hide('slow');
-				$('#aboutText').hide('slow');
-				$('#consultText').hide('slow');
-				$('#pdhText').hide('slow');
+				$('#about-text-container').hide('slow');
+				//$('#consultText').hide('slow');
+				$('#pdh-text-container').hide('slow');
                 if($('#projectCards').css('display') == 'none'){
 					$('#projBtn').css({"background-color": "white", "color": "#27a8e0"});
 					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
@@ -250,12 +256,13 @@ Ongoing news and updates about the certificate and its students can be found on 
                     $('#projectCards').show('slow');
                 }
             })
+						/*
 			var consultBtn = document.getElementById('consultBtn')
             consultBtn.addEventListener('click', function() {
                 $('#carousel').hide('slow');
-				$('#aboutText').hide('slow');
+				$('#about-text-container').hide('slow');
 				$('#projectCards').hide('slow');
-				$('#pdhText').hide('slow');
+				$('#pdh-text-container').hide('slow');
                 if($('#consultText').css('display') == 'none'){
 					$('#consultBtn').css({"background-color": "white", "color": "#27a8e0"});
 					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
@@ -264,18 +271,20 @@ Ongoing news and updates about the certificate and its students can be found on 
                     $('#consultText').show('slow');
                 }
             })
+						*/
+
 			var pdhBtn = document.getElementById('pdhBtn')
             pdhBtn.addEventListener('click', function() {
                 $('#carousel').hide('slow');
-				$('#aboutText').hide('slow');
+				$('#about-text-container').hide('slow');
 				$('#projectCards').hide('slow');
-				$('#consultText').hide('slow');
-                if($('#pdhText').css('display') == 'none'){
+				//$('#consultText').hide('slow');
+                if($('#pdh-text-container').css('display') == 'none'){
 					$('#pdhBtn').css({"background-color": "white", "color": "#27a8e0"});
 					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
 					$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
 					$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
-                    $('#pdhText').show('slow');
+                    $('#pdh-text-container').show('slow');
                 }
             })
 	</script>
