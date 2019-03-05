@@ -63,12 +63,14 @@ html, body {
 
 .right-side-main{
     margin-right:100px;
+    font-size: 1.rem;
+    font-family: 'Montserrat', sans-serif;
 }
 #aboutText{
     margin-top: 20%; 
 }
 #scholarship{
-    margin-top: 60%; 
+    margin-top: 30%; 
 }
 #maps{
     margin-top: 60%; 
