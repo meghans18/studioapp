@@ -62,6 +62,14 @@ html, body {
 }
 
 .right-side-main{
-    margin-top: 60%; 
     margin-right:100px;
+}
+#aboutText{
+    margin-top: 20%; 
+}
+#scholarship{
+    margin-top: 60%; 
+}
+#maps{
+    margin-top: 60%; 
 }
