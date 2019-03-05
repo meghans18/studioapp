@@ -86,7 +86,7 @@ body {
 #carousel {
 }
 
-.btn:focus {
+.btn:focus{
 	outline:none;
 	box-shadow:none;
 }
@@ -94,18 +94,35 @@ body {
 	color: white;
 }
 
-#aboutText, .event-description {
+#about-text-container, .event-description {
 	display: none;
 }
-#aboutText{
-	background-image:url('main-images/about-background.jpg');
+#about-text-container{
+	/*background-image:url('main-images/about-background.jpg');*/
 	height: 100%;
+}
+#about-text{
+	padding:40px;
+	margin:40px;
+	color:white;
+	background-color:rgba(0, 0, 0, 0.5);
+	position: relative;
+	top: 40px;
 }
 #consultText {
 	display: none;
 }
-#pdhText {
+#pdh-text-container {
 	display: none;
+	height: 100%;
+}
+#pdh-text{
+	padding:40px;
+	margin:40px;
+	color:white;
+	background-color:rgba(0, 0, 0, 0.5);
+	position: relative;
+	top: 40px;
 }
 .event{
 	margin-top: 15px;
