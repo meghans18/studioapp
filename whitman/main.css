@@ -60,3 +60,8 @@ html, body {
     margin-right: auto;
     margin-left: auto;
 }
+
+.right-side-main{
+    margin-top: 60%; 
+    margin-right:100px;
+}
