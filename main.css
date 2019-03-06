@@ -152,12 +152,19 @@ body {
 ::-webkit-scrollbar {
 	display: none;
 }
-
-.touchscreen-main-map{
-	width: 80%;
+.floor-maps{
+	display: none;
+}
+#touchscreen-main-floor-1{
+	width: 90%;
 	text-align: center;
 	margin-top: -0.5rem;
+	display: block;	
 }
+.floor-text{
+	color: white;
+}
+
 
 /*media queries in css*/
 @media only screen and (max-width: 380px) {
