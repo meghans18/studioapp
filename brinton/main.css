@@ -37,7 +37,9 @@ html body{
 }
 
 .btn-toolbar {
-	margin-top: 1rem;
+	margin-top: -5rem;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .btn {
@@ -45,8 +47,9 @@ html body{
 	font-weight: 800;
 	border-radius: 0px;
 	font-size: 1.5rem;
-	height: 4rem;
+	height: 3rem;
 	background-color: orange;
+	border: 2px solid orange;
 }
 
 .btn:focus {
@@ -60,7 +63,9 @@ html body{
 
 #homeBtn {
 	float: left;
-	margin-top: -5rem;
+	position: absolute;
+	margin-top: 1rem;
+	margin-left: 1rem;
 }
 
 #icon {
