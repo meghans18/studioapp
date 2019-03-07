@@ -59,20 +59,19 @@
 					<p>Going somewhere?</p>
 				</div>
 				<div id="side-map" class="col-12">
-					<object id="touchscreen-main-floor-1" class="floor-maps" type="image/svg+xml" data="main-images/Lib_Floor1.svg"></object>
+					<object id="touchscreen-main-floor-1" class="floor-maps" type="image/svg+xml" data="main-images/Lib_Floor1.svg" style="display: block"></object>
 					<object id="touchscreen-main-floor-2" class="floor-maps" type="image/svg+xml" data="main-images/Lib_Floor2.svg"></object>
 					<object id="touchscreen-main-floor-3" class="floor-maps" type="image/svg+xml" data="main-images/Lib_Floor3.svg"></object>
-					<object id="touchscreen-main-flo0r-4" class="floor-maps" type="image/svg+xml" data="main-images/Lib_Floor4.svg"></object>
+					<object id="touchscreen-main-floor-4" class="floor-maps" type="image/svg+xml" data="main-images/Lib_Floor4.svg"></object>
 					<object id="touchscreen-main-floor-5" class="floor-maps" type="image/svg+xml" data="main-images/Lib_Floor5.svg"></object>
 						<div class="floor-text"><strong>Floor: </strong>
-							<span id="floor-1">1 </span>
+							<span id="floor-1" style="color: black">1 </span>
 							<span id="floor-2">2 </span>
 							<span id="floor-3">3 </span>
 							<span id="floor-4">4 </span>
 							<span id="floor-5">5 </span>
 						</div>
 				</div>
-
 			</div>
 			<div class="col-9" id="mainContent">
 				<div id="carousel">
@@ -225,6 +224,37 @@
 	  // Update the time display
 	  document.getElementById("timeString").innerHTML = currentTimeString;
 	}
+	
+	$("#floor-1").click(function() {
+		$("#touchscreen-main-floor-2, #touchscreen-main-floor-3, #touchscreen-main-floor-4, #touchscreen-main-floor-5").css({"display":"none"});
+		$("#floor-2, #floor-3, #floor-4, #floor-5").css({"color":"white"});
+		$("#floor-1").css({"color":"black"});
+		$("#touchscreen-main-floor-1").css({"display":"block"});
+	});
+	$("#floor-2").click(function() {
+		$("#touchscreen-main-floor-1, #touchscreen-main-floor-3, #touchscreen-main-floor-4, #touchscreen-main-floor-5").css({"display":"none"});
+		$("#floor-1, #floor-3, #floor-4, #floor-5").css({"color":"white"});
+		$("#floor-2").css({"color":"black"});
+		$("#touchscreen-main-floor-2").css({"display":"block"});
+	});
+	$("#floor-3").click(function() {
+		$("#touchscreen-main-floor-1, #touchscreen-main-floor-2, #touchscreen-main-floor-4, #touchscreen-main-floor-5").css({"display":"none"});
+		$("#floor-1, #floor-2, #floor-4, #floor-5").css({"color":"white"});
+		$("#floor-3").css({"color":"black"});
+		$("#touchscreen-main-floor-3").css({"display":"block"});
+	});
+	$("#floor-4").click(function() {
+		$("#touchscreen-main-floor-1, #touchscreen-main-floor-2, #touchscreen-main-floor-3, #touchscreen-main-floor-5").css({"display":"none"});
+		$("#floor-1, #floor-2, #floor-3, #floor-5").css({"color":"white"});
+		$("#floor-4").css({"color":"black"});
+		$("#touchscreen-main-floor-4").css({"display":"block"});
+	});
+	$("#floor-5").click(function() {
+		$("#touchscreen-main-floor-1, #touchscreen-main-floor-2, #touchscreen-main-floor-3, #touchscreen-main-floor-4").css({"display":"none"});
+		$("#floor-1, #floor-2, #floor-3, #floor-4").css({"color":"white"});
+		$("#floor-5").css({"color":"black"});
+		$("#touchscreen-main-floor-5").css({"display":"block"});
+	});
 
 		var logoBtn = document.getElementById('logo')
         logoBtn.addEventListener('click', function() {

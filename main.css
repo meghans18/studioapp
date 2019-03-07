@@ -155,14 +155,20 @@ body {
 .floor-maps{
 	display: none;
 }
-#touchscreen-main-floor-1{
+#touchscreen-main-floor-1,
+#touchscreen-main-floor-2,
+#touchscreen-main-floor-3,
+#touchscreen-main-floor-4,
+#touchscreen-main-floor-5 {
 	width: 90%;
 	text-align: center;
-	margin-top: -0.5rem;
-	display: block;	
+	margin-top: -0.5rem;	
 }
 .floor-text{
 	color: white;
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
 }
 
 
