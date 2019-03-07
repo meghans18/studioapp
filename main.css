@@ -162,13 +162,20 @@ body {
 #touchscreen-main-floor-5 {
 	width: 90%;
 	text-align: center;
-	margin-top: -0.5rem;	
+	margin-top: -0.5rem;
+	margin-left: 1.2rem;
 }
 .floor-text{
 	color: white;
 	position: absolute;
-	bottom: 15px;
-	left: 15px;
+	bottom: 5px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+}
+
+.floor-text span {
+	padding-left: 1rem;
 }
 
 
