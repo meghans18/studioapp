@@ -174,7 +174,10 @@ body {
 .floor-text span {
 	padding-left: 1rem;
 }
-
+#flash-content{
+	height: 200px!important;
+	width:200px!important;
+}
 
 /*media queries in css*/
 @media only screen and (max-width: 380px) {

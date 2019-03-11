@@ -75,3 +75,9 @@ html, body {
 #maps{
     margin-top: 60%; 
 }
+#back-icon{
+	height: 100px;
+    vertical-align: top;
+    float:right;
+    position: relative;
+}
