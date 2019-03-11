@@ -47,14 +47,17 @@ html, body {
     display: none;
 }
 
-#faces {
-    display: none;
+#facesBtn{
+    background-color: #C0C0C0; 
+    color": black;
 }
 
 #faceImg {
-    margin-top: 6rem;
+    margin-top: 12rem;
     padding-right: 1rem;
     transform: translateX(-4rem);
+    width: 800px;
+    height: 800px;
 }
 #mainBtn{
     margin-right: auto;
