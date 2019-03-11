@@ -26,13 +26,14 @@
         <title>Brinton Entertainment</title>
     </head>
 	<body>
-		<a href="index.html"><img id="icon" src="icon.png" width="75" height="75"></a>
+		<button id="homeBtn" class="btn" onclick="window.location.href = '../index.html'">Back to Main</button>
 		<div class="container-fluid text-center">
-			<div id="brintonLogo">
-				<h1 id="curved-1">BRINTON</h1>
-				<h2 id="curved-2">ENTERTAINMENT</h2>
-				<h3>CO.</h3>
-			</div>
+			<img id="brintonLogo" src="images/marquee-transparent.png" class="col-6">
+            <div id="btnDiv" class="btn-toolbar col-6">
+                <button class="btn col" id="magBtn" onclick="window.location.href = 'nowShowing.html'" style="background-color: black; color: #ae7327;">MAGIC LANTERNS</button>
+                <button class="btn col" id="galBtn" onclick="window.location.href = 'meet.html'" style="margin: 0px 20px;">GALLERY INFO</button>
+                <button class="btn col" id="mapBtn" onclick="window.location.href = 'brintonMap/index.html'">SEE THE MAP</button>
+            </div>
 		</div>
 		<div class="row justify-content-center" id="nowShowing">
 			<h2>NOW SHOWING</h2>

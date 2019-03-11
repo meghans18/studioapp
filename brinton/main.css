@@ -12,19 +12,7 @@ html {
 h1, h2, h3 {
 	font-family: "Dotline", cursive;
 	font-weight: 400;
-	color: orange;
-}
-
-#brintonLogo h1 {
-	font-size: 9rem;
-}
-#brintonLogo h2 {
-	font-size: 4rem;
-	margin-top: -8rem;
-}
-#brintonLogo h3 {
-	font-size: 3.5rem;
-	margin-top: -6rem;
+	color: #ae7327;
 }
 
 html body{
@@ -33,11 +21,13 @@ html body{
 
 .container-fluid {
 	background-color: black;
-	color: orange;
+	color: #ae7327;
 }
 
 .btn-toolbar {
-	margin-top: 1rem;
+	margin-top: 2rem;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .btn {
@@ -45,8 +35,9 @@ html body{
 	font-weight: 800;
 	border-radius: 0px;
 	font-size: 1.5rem;
-	height: 4rem;
-	background-color: orange;
+	height: 3rem;
+	background-color: #ae7327;
+	border: 2px solid #ae7327;
 }
 
 .btn:focus {
@@ -55,22 +46,24 @@ html body{
 }
 
 #brintonLogo {
-	margin-top: 6rem;
+	margin-top: 4rem;
 }
 
 #homeBtn {
 	float: left;
-	margin-top: -5rem;
+	position: absolute;
+	margin-top: 1rem;
+	margin-left: 1rem;
 }
 
 #icon {
-    border-top: 2px solid orange;
-    border-right: 2px solid orange;
-    border-bottom: 2px solid orange;
+    border-top: 2px solid #ae7327;
+    border-right: 2px solid #ae7327;
+    border-bottom: 2px solid #ae7327;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
     padding: 0px 8px;
-    background-color: orange;
+    background-color: #ae7327;
 	float: left;
 	margin-top: -5rem;
 	z-index: 1000;
@@ -87,7 +80,7 @@ html body{
 
 .item img {
     height: 400px;
-    border: 3px solid orange;
+    border: 3px solid #ae7327;
 }
 
 .owl-carousel {
@@ -97,7 +90,7 @@ html body{
 
 .pop_item {
 	margin-top: 2rem;
-    border: 3px solid orange;
+    border: 3px solid #ae7327;
 }
 
 .clickSwitch{
@@ -145,7 +138,7 @@ html body{
 	margin: 10px;
 	padding: 0px;
 	height: 150px;
-	color: orange;
+	color: #ae7327;
 	font-family: "Montserrat";
 }
 
@@ -158,7 +151,7 @@ html body{
 /*styles leaflet slider*/
 #leaflet-slider .ui-slider-handle {
 	background-image: none;
-	background-color: orange;
+	background-color: #ae7327;
 	border: 1px solid black;
 }
 

@@ -152,14 +152,27 @@ body {
 .floor-maps{
 	display: none;
 }
-#touchscreen-main-floor-1{
+#touchscreen-main-floor-1,
+#touchscreen-main-floor-2,
+#touchscreen-main-floor-3,
+#touchscreen-main-floor-4,
+#touchscreen-main-floor-5 {
 	width: 90%;
 	text-align: center;
 	margin-top: -0.5rem;
-	display: block;	
+	margin-left: 1.2rem;
 }
 .floor-text{
 	color: white;
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+}
+
+.floor-text span {
+	padding-left: 1rem;
 }
 
 
