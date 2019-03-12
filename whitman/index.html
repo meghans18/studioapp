@@ -111,6 +111,16 @@
         </div>
         
         <script>
+			window.onclick = resetTimer;
+			var t;
+			function resetTimer() {
+				clearTimeout(t);
+				t = setTimeout(function() {
+					window.location.href = '../index.html';
+				}, 300000);
+			}
+			resetTimer();
+			
             var abtBtn = document.getElementById('abtBtn');
             abtBtn.addEventListener('click', function() {
                 $('#scholarship').hide('slow')
