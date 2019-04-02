@@ -57,16 +57,16 @@ html body{
 }
 
 #icon {
-    border-top: 2px solid #ae7327;
-    border-right: 2px solid #ae7327;
-    border-bottom: 2px solid #ae7327;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
     padding: 0px 8px;
-    background-color: #ae7327;
-	float: left;
-	margin-top: -5rem;
-	z-index: 1000;
+    background-color: black;
+		float: right;
+		margin-top: -5rem;
+		z-index: 1000;
 }
 
 #nowShowing {
