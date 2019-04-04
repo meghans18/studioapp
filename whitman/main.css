@@ -41,14 +41,14 @@ html, body {
 
 #scholarship {
     display: none;
-} 
+}
 
 #maps {
     display: none;
 }
 
 #facesBtn{
-    background-color: #C0C0C0; 
+    background-color: #C0C0C0;
     color": black;
 }
 
@@ -66,21 +66,32 @@ html, body {
 
 .right-side-main{
     margin-right:100px;
-    font-size: 1.rem;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
 }
 #aboutText{
-    margin-top: 10%; 
+    margin-top: 10%;
 }
 #scholarship{
-    margin-top: 30%; 
+    margin-top: 30%;
 }
 #maps{
-    margin-top: 60%; 
+    margin-top: 10%;
+    font-size: .9rem;
 }
 #back-icon{
 	height: 100px;
     vertical-align: top;
     float:right;
     position: relative;
+}
+
+.small-btn {
+    font-family: 'Petit Formal Script', cursive;
+    background-color: #8E813D;
+    color: black;
+    border-radius: 0px;
+    border:none;
+    line-height: 1.5rem;
+    font-size: 1rem;
 }
