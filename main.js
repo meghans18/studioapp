@@ -6,7 +6,7 @@ let win, projWin
 function createWindow() {
 	win = new BrowserWindow({frame: false, fullscreen: true})
 	win.loadFile('index.html')
-	win.webContents.openDevTools()
+	//win.webContents.openDevTools()
 }
 
 app.on('ready', createWindow)
