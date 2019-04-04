@@ -1,0 +1,58 @@
+html, body, #map {
+	height: 100%;
+	width: 100%;
+	border: none;
+	overflow: hidden;
+	margin: 0px;
+}
+
+
+.leaflet-popup {
+	width: 500px;
+}
+
+.leaflet-popup-content {
+	max-height: 300px;
+}
+
+.marker-cluster-small div, .marker-cluster-small{
+	background-color: #A5C98D;
+	color: white;
+}
+
+.marker-cluster-medium div, .marker-cluster-medium{
+	background-color: #627754;
+	color: white;
+}
+
+.marker-cluster-large div, .marker-cluster-large{
+	background-color: #2A3324;
+	color: white;
+}
+
+.leaflet-control-attribution{
+	display: none;
+}
+
+#leaflet-slider{
+	width: 600px!important;
+}
+
+.ui-slider-horizontal .ui-slider-handle{
+	background: #627754;
+}
+.ui-widget-header{
+	background: #A5C98D;
+}
+#icon{
+	z-index: 1000;
+}
+#timestamp-text{
+	color:#777;
+	padding:15px;
+	z-index: 1000;
+	position: relative;
+	float: right;
+	top: 10px;
+	margin-right: 30px;
+}
