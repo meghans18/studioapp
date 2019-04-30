@@ -18,8 +18,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-		<script src="../inactiveStart.js"></script>
+		<script src="../analytics_reset.js"></script>
 		<meta name="authoring-tool" content="Adobe_Animate_CC">
 		<!-- write your code here -->
 		<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
@@ -106,7 +105,6 @@
 							continue;
 						if(layerObj.currentFrame != layerObj.parent.currentFrame)
 						{
-							console.log('hello');
 							layerObj.gotoAndPlay(layerObj.parent.currentFrame);
 						}
 						var matToApply = new createjs.Matrix2D;
