@@ -39,22 +39,26 @@
 				<div id="side-calendar" class="col-12 text-center">
 					<p>Upcoming Events</p>
 					<div class="event">
-						<div class="event-date col-4">April 10th, 3pm</div>
-						<div class="event-info col-8">
-							<div class="event-title">Share your Scholarship: The Downtown Pop Underground</div><div class="event-location">1015A Main Library (Studio Classroom)</div> <div class="event-description">Professor Kembrew McLeod and Nikki White share The Downtown Pop Underground Online, a companion website to the book of the same title which examines the various art scenes that thrived in downtown New York City from 1958 to 1976.</div>
+						<div class="event-date col-3">May 2nd</div>
+						<div class="event-info col-7">
+							<div class="event-title">Walt Whitman: A Bicentennial Celebration</div><div class="event-location">Main Library Gallery</div>
 						</div>
+						<img tabindex="0" class="infoIcon col-2" role="button" data-toggle="popover" data-trigger="focus" data-content="The exhibit “Walt Whitman: A Bicentennial Celebration” will celebrate the bicentennial of the birth of one of the most significant and influential writers in the United States, Walt Whitman (1819-1892), and highlight the University of Iowa’s role as a major center for Whitman Studies and Whitman scholarship." src="main-images/info_icon.png">
+                        <!--<button type="button" class="col-2 btn" style="font-size:1rem;" data-container="body" data-toggle="popover" data-placement="right" data-content="Professor Kembrew McLeod and Nikki White share The Downtown Pop Underground Online, a companion website to the book of the same title which examines the various art scenes that thrived in downtown New York City from 1958 to 1976.">. . .</button>
+					--> </div>
+					<div class="event">
+						<div class="event-date col-3">June 18th, 7pm</div>
+						<div class="event-info col-7">
+							<div class="event-title">Walt Whitman at 200: The Bicentennial Symposium</div><div class="event-location">Main Library Gallery, Room 1001</div>
+						</div>
+						<img tabindex="0" class="infoIcon col-2" role="button" data-toggle="popover" data-trigger="focus" data-content="Panel on the Walt Whitman Archive: Kenneth M. Price, Matt Cohen, and Kevin McMullen, University of Nebraska-Lincoln, and Ed Folsom and Stephanie M. Blalock, University of Iowa. The participants are all senior editors on the Archive." src="main-images/info_icon.png">
 					</div>
 					<div class="event">
-						<div class="event-date col-4">April 18th, 5pm</div>
-						<div class="event-info col-8">
-							<div class="event-title">Black like Me: Representations of Biblical Hagar - Nyasha Junior | Temple University</div><div class="event-location">101 Becker Communication Studies Building</div> <div class="event-description"></div>
+						<div class="event-date col-3">June 19th, 3:30pm</div>
+						<div class="event-info col-7">
+							<div class="event-title">Walt Whitman at 200: The Bicentennial Symposium</div><div class="event-location">Main Library Gallery, Room 1001</div>
 						</div>
-					</div>
-					<div class="event">
-						<div class="event-date col-4">April 24th, 4pm</div>
-						<div class="event-info col-8">
-							<div class="event-title">Share Your Scholarship: UK Choral Composers Project</div><div class="event-location">Voxman Choral Rehearsal Room</div> <div class="event-description">Professor Tim Stalter and Nikki White discuss the UK Choral Composers project, highlighting British choral composition from the 20th and 21st centuries, and featuring composer profiles and a database of their compositions and use of texts.</div>
-						</div>
+						<img tabindex="0" class="infoIcon col-2" role="button" data-toggle="popover" data-trigger="focus" data-content="Matt Cohen, University of Nebraska-Lincoln, “From Margin to Method: Walt Whitman, Novelty, and Humanities Computing”; Kenneth M. Price, University of Nebraska-Lincoln, “Strayed Cattle: Anti-Pastoralism in Whitman’s War Writings.” Cohen is author of Whitman’s Drift: Imagining Literary Distribution (2017); Price is co-director of the online Walt Whitman Archive and author of several books on Whitman, including To Walt Whitman, America (2004) and the forthcoming Whitman in Washington: Becoming the National Poet in the Federal City." src="main-images/info_icon.png">
 					</div>
 				</div>
 				<div id="side-text" class="col-12 text-center">
@@ -88,9 +92,6 @@
 						</div>
 						<div class="carousel-item">
 						  <img class="d-block w-100" src="main-images/whitmanMain.png" alt="Third slide" onclick="window.location.href = 'whitman/index.html'">
-						</div>
-						<div class="carousel-item">
-						  <img class="d-block w-100" src="main-images/ideal.png" alt="Third slide">
 						</div>
 					  </div>
 					  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -205,6 +206,14 @@
 	<!-- code for link button: <a href="#" class="btn" role="button">Link Button</a> -->
 	<!-- could possibly use card columns for the display projects page -->
 	<script>
+        
+       $(function () {
+          $('[data-toggle="popover"]').popover()
+        })
+		
+		$('.popover-dismiss').popover({
+			trigger: 'focus'
+		})
 
 	function updateClock ( ) {
 	  var currentTime = new Date ( );

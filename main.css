@@ -23,6 +23,14 @@ body {
 	border: .5rem solid #27a8e0;
 }
 
+.infoIcon {
+	transform: translateY(25%);
+	width: 30px;
+	border: none; 
+	outline: none; 
+	padding: 0px;
+}
+
 #btnContainer.active {
 	background-color: #00bfff;
 	color: white;
