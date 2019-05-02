@@ -8,9 +8,8 @@ function createWindow() {
 	let win = new BrowserWindow({frame: false, fullscreen: true})
 	win.loadFile('index.html')
 	//win.webContents.openDevTools()
-}
-
-    var pages = ['brinton/nowShowing.html', 'whitman/index.html']
+	
+	var pages = ['brinton/nowShowing.html', 'whitman/index.html']
 
     var t, openSwitch, closeSwitch;
     function idleTimer() {
