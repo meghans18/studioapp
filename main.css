@@ -26,8 +26,8 @@ body {
 .infoIcon {
 	transform: translateY(25%);
 	width: 30px;
-	border: none; 
-	outline: none; 
+	border: none;
+	outline: none;
 	padding: 0px;
 }
 
@@ -143,6 +143,14 @@ body {
 	float: left;
 	clear: right;
 	text-align: left;
+}
+
+.carousel-item {
+	height: 925px;
+}
+
+#risingTogether {
+	margin-top: 235px;
 }
 
 #projectCards {
