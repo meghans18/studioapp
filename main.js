@@ -11,7 +11,7 @@ function createWindow() {
 	win.loadFile('index.html')
 
 	// used to switch between different project home pages in the timer
-    var pages = ['brinton/nowShowing.html', 'whitman/index.html']
+    var pages = ['brinton/nowShowing.html', 'whitman/index.html', 'risingTogether/index.html']
 
 	// different variables to help the timer run
     var t, openSwitch, closeSwitch;
