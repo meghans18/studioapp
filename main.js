@@ -15,7 +15,7 @@ function createWindow() {
 
 	// different variables to help the timer run
     var t, openSwitch, closeSwitch;
-	
+
     function idleTimer() {
 		// when the main process receives 'reset', runs the resetTimer function below
         ipcMain.on('reset', () => {
@@ -24,10 +24,10 @@ function createWindow() {
 
         var i = 0; // used to cycle through pages
         function rotation() {
-			
+
 			// first step is to put it back on the homepage no matter where it's at
             win.loadFile('index.html')
-			
+
 			// send messages to child process (actions can be found in analytics_reset.js)
             win.webContents.send('writeFile');
             win.webContents.send('resetValues');
@@ -39,7 +39,7 @@ function createWindow() {
                 }
                 win.loadFile(pages[i]);
                 i++;
-				
+
 				// this setTimeout runs every 5 minutes within the 10  minutes of the interval, and will show the homepage again
                 closeSwitch = setTimeout(function() {
                     win.loadFile('index.html');
@@ -47,9 +47,9 @@ function createWindow() {
             }, 10000); // 600000 (needs to be twice the inside setTimeout value)
         }
 
-		// every time there is a click, this function runs. every time it runs it clears the timers so they are not running 
+		// every time there is a click, this function runs. every time it runs it clears the timers so they are not running
 		// anymore and are set back to the beginning. if this function is not called again for 5 minutes (the number in t's setTimeout)
-		// the timeout will not be cleared and it'll hit the condition to run the function rotation. 
+		// the timeout will not be cleared and it'll hit the condition to run the function rotation.
 		// this also corresponds to no clicks for 5 minutes
         function resetTimer() {
             clearInterval(openSwitch);
