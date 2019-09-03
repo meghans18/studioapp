@@ -15,7 +15,7 @@ document.addEventListener('click', function (e) {
 	} else {
 		localStorage.clickCount = 1;
 	}
-	
+
 	// used for the array that stores each click and its corresponding data
 	// want to add on if there is already clicks stored in localStorage during the same time period
 	if (localStorage.clicks) {
@@ -23,23 +23,23 @@ document.addEventListener('click', function (e) {
 	} else {
 		storedClicks = [];
 	}
-	
+
 	// the following builds the individual click object based on fields of the event e
 	var click = {};
 	click["number"] = localStorage.clickCount;
-    click["x"] = e.x;
-    click["y"] = e.y;
-    click["element"] = e.srcElement.id;
-    click["timeElapsed"] = e.timeStamp;
-    click["page"] = e.srcElement.baseURI;
-    click["time"] = new Date();
+	click["x"] = e.x;
+	click["y"] = e.y;
+	click["element"] = e.srcElement.id;
+	click["timeElapsed"] = e.timeStamp;
+	click["page"] = e.srcElement.baseURI;
+	click["time"] = new Date();
 
 	// stores the individual click object in the array with other click objects
-    storedClicks[localStorage.clickCount-1] = click;
-	
+	storedClicks[localStorage.clickCount-1] = click;
+
 	// converts it to string and stores it back in localStorage to keep using it during the same time period
-    localStorage.setItem("clicks", JSON.stringify(storedClicks));
-    
+	localStorage.setItem("clicks", JSON.stringify(storedClicks));
+
 	// last step is to send reset to the main process so that the inactivity timer does not run yet
 	ipcRenderer.send('reset')
 })
@@ -47,23 +47,32 @@ document.addEventListener('click', function (e) {
 // runs when this child process receives 'writeFile' from the main process
 ipcRenderer.on('writeFile', () => {
 	// builds the 'user' object and then appends it in analytics.txt file
-	var clicks = JSON.parse(localStorage.clicks);
-	var user = {};
-	user["clicks"] = clicks;
-	var userWrite = JSON.stringify(user) + ",";
-	fs.appendFile("analytics.txt", userWrite, (err) => {
-		if (err) throw err;
-	})
+	if (localStorage.clicks) {
+		var clicks = JSON.parse(localStorage.clicks);
+		if (localStorage.users) {
+			localStorage.users = Number(localStorage.users) + 1;
+		} else {
+			localStorage.users = 1;
+		}
+		var number = JSON.parse(localStorage.users);
+		var user = {};
+		user["number"] = number;
+		user["clicks"] = clicks;
+		var userWrite = JSON.stringify(user) + ",";
+		fs.appendFile("analytics.txt", userWrite, (err) => {
+			if (err) throw err;
+		})
+	}
 })
 
 // runs when this child process receives 'resetValues' from the main process
 // so basically used to reset the 'user' once 5 mins of inactivity happens
 // (set everything back to zero or delete it from localStorage)
 ipcRenderer.on('resetValues', () => {
-    if (localStorage.clickCount) {
-        localStorage.clickCount = 0;
-    }
-    if (localStorage.clicks) {
+	if (localStorage.clickCount) {
+		localStorage.clickCount = 0;
+	}
+	if (localStorage.clicks) {
 		localStorage.removeItem("clicks")
 	}
 })
