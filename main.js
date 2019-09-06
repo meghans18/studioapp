@@ -11,7 +11,7 @@ function createWindow() {
 	win.loadFile('index.html')
 
 	// used to switch between different project home pages in the timer
-    var pages = ['brinton/nowShowing.html', 'whitman/index.html', 'risingTogether/index.html']
+    var pages = ['risingTogether/index.html']//temp taken out - 'brinton/nowShowing.html', 'whitman/index.html', 
 
 	// different variables to help the timer run
     var t, openSwitch, closeSwitch;
@@ -43,8 +43,8 @@ function createWindow() {
 				// this setTimeout runs every 5 minutes within the 10  minutes of the interval, and will show the homepage again
                 closeSwitch = setTimeout(function() {
                     win.loadFile('index.html');
-                }, 5000); // 300000
-            }, 10000); // 600000 (needs to be twice the inside setTimeout value)
+                }, 300000); // 300000
+            }, 600000); // 600000 (needs to be twice the inside setTimeout value)
         }
 
 		// every time there is a click, this function runs. every time it runs it clears the timers so they are not running
@@ -55,7 +55,7 @@ function createWindow() {
             clearInterval(openSwitch);
             clearTimeout(closeSwitch);
             clearTimeout(t);
-            t = setTimeout(rotation, 10000);//300000
+            t = setTimeout(rotation, 300000);//300000
         }
     }
     idleTimer();
