@@ -22,8 +22,8 @@
         <link rel="stylesheet" href="owl.theme.default.min.css">
         <script src="owl.carousel.min.js"></script>
         <script src="circletype.min.js"></script>
-		
-		<script src="../inactiveStart.js"></script>
+
+		<script src="../analytics_reset.js"></script>
         <script>if (window.module) module = window.module;</script>
         <title>Brinton Entertainment</title>
     </head>
@@ -48,7 +48,7 @@
 			  <div class= "item lanternF_popup_open"><img id="image" src="images/lanternF%20(1).jpg" /></div>
 			  <div class= "item lanternG_popup_open"><img id="image" src="images/lanternG%20(1).jpg" /></div>
             </div>
-			
+
 			<div class="popups" id="lanternA_popup">
 			<p>TAP IMAGE FOR MORE</p>
               <img width="auto" height="25%" class="clickSwitch" id="A" src="images/lanternA%20(1).jpg">
@@ -78,9 +78,9 @@
               <img width="auto" height="25%" class="clickSwitch" id="G" src="images/lanternG%20(1).jpg">
             </div>
 		</div>
-		
+
 		<script>
-		
+
 		var setNum = {
 				'A':2,
 				'B':5,
@@ -90,12 +90,12 @@
 				'F':12,
 				'G':14,
 			}
-			
+
 			//$("#image").fadeOut(5000, function() {
 			/*$(".clickSwitch").draggable({
 				containment: 'window',
 			});*/
-			
+
 			var i=2;
 			//each popup has the class clickSwitch so this works for each popup
 			$(".clickSwitch").click(function() {
@@ -111,10 +111,10 @@
 					i++;
 				}
 			});
-			
+
 			//add code to go back to home page
 		</script>
-		
+
 		<script>
             //var ipcRenderer = require('electron').ipcRenderer;
             $(document).ready(function(){
@@ -171,7 +171,7 @@
                   }
                 });
             });
-			
+
 			new CircleType(document.getElementById('curved-1')).radius(700);
 			new CircleType(document.getElementById('curved-2')).radius(500);
         </script>

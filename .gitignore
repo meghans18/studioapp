@@ -3,3 +3,5 @@ brinton/DanceVideo.mp4
 
 node_modules/
 package-lock.json
+analytics.txt
+dist/

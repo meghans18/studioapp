@@ -11,14 +11,13 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="main.css">
-		
-		<script src="inactiveStart.js"></script>
+
+		<script src="analytics_reset.js"></script>
 		<script>if (window.module) module = window.module;</script>
 
 		<title>Homepage Template</title>
 	</head>
-	<body onload="updateClock(); setInterval('updateClock()', 1000)">
-	<!-- .container = fixed width container, .container-fluid = full width container -->
+	<body onload="updateClock(); setInterval('updateClock()', 1000)"> <!-- runs the update clock method every second -->
 	<div class="container-fluid">
 		<div class="row col-12">
 			<div class="col-3">
@@ -39,27 +38,33 @@
 				<div id="side-calendar" class="col-12 text-center">
 					<p>Upcoming Events</p>
 					<div class="event">
-						<div class="event-date col-4">April 10th, 3pm</div>
-						<div class="event-info col-8">
-							<div class="event-title">Share your Scholarship: The Downtown Pop Underground</div><div class="event-location">1015A Main Library (Studio Classroom)</div> <div class="event-description">Professor Kembrew McLeod and Nikki White share The Downtown Pop Underground Online, a companion website to the book of the same title which examines the various art scenes that thrived in downtown New York City from 1958 to 1976.</div>
+						<div class="event-date col-3">September 6th, 3pm</div>
+						<div class="event-info col-7">
+							<div class="event-title">Studio Graduate Open House</div><div class="event-location">1015 Main Library</div>
 						</div>
+						<!-- line below is used to create popups, along with a little javascript in the script section of this file -->
+						<img tabindex="0" class="infoIcon col-2" role="button" data-toggle="popover" data-trigger="focus" data-content="Please join us on Friday, September 6th from 3:00-4:00 p.m. in the Digital Scholarship and Publishing Studio (1015 Main Library) for a graduate student open house to learn more about how the Studio can support your digital research and scholarship. We'll be sharing details about the Public Digital Humanities Graduate Certificate, our Studio summer fellowship (in collaboration with the Graduate College), and general project consultation and assistance. Refreshments will be served!" src="main-images/info_icon.png">
+
 					</div>
 					<div class="event">
-						<div class="event-date col-4">April 18th, 5pm</div>
-						<div class="event-info col-8">
-							<div class="event-title">Black like Me: Representations of Biblical Hagar - Nyasha Junior | Temple University</div><div class="event-location">101 Becker Communication Studies Building</div> <div class="event-description"></div>
+						<div class="event-date col-3">October 16th, 4pm</div>
+						<div class="event-info col-7">
+							<div class="event-title">Share Your Scholarship: Shell Oil's Deepwater Mission to Mars</div><div class="event-location">1015A Main Library</div>
 						</div>
+						<img tabindex="0" class="infoIcon col-2" role="button" data-toggle="popover" data-trigger="focus" data-content="Associate Professor of History and Geography Tyler Priest will share his research and work on a website devoted to documenting and narrating the story of Royal Dutch Shell's pioneering development of the Mars basin in the deepwater Gulf of Mexico (3,000 feet of water)." src="main-images/info_icon.png">
 					</div>
 					<div class="event">
-						<div class="event-date col-4">April 24th, 4pm</div>
-						<div class="event-info col-8">
-							<div class="event-title">Share Your Scholarship: UK Choral Composers Project</div><div class="event-location">Voxman Choral Rehearsal Room</div> <div class="event-description">Professor Tim Stalter and Nikki White discuss the UK Choral Composers project, highlighting British choral composition from the 20th and 21st centuries, and featuring composer profiles and a database of their compositions and use of texts.</div>
+						<div class="event-date col-3">December 10th, 12:30pm</div>
+						<div class="event-info col-7">
+							<div class="event-title">Discover Study Abroad</div><div class="event-location">University Capitol Centre, Room 1111B</div>
 						</div>
+						<img tabindex="0" class="infoIcon col-2" role="button" data-toggle="popover" data-trigger="focus" data-content="Would you like to study abroad during your time at the University of Iowa, but don't know where to start? Attend one of our weekly Discover Study Abroad info sessions to learn how study abroad works and find the right international opportunity for you! Discover Study Abroad sessions are the first step for interested students to learn more about the study abroad process and ask any questions they may have, covering topics such as study abroad locations, eligibility, deadlines, academics, and more." src="main-images/info_icon.png">
 					</div>
 				</div>
 				<div id="side-text" class="col-12 text-center">
 					<p>Going somewhere?</p>
 				</div>
+				<!-- code for the floor maps -->
 				<div id="side-map" class="col-12 justify-content-center text-center">
 					<object id="touchscreen-main-floor-1" class="floor-maps" type="image/svg+xml" data="main-images/Lib_Floor1.svg" style="display: block"></object>
 					<object id="touchscreen-main-floor-2" class="floor-maps" type="image/svg+xml" data="main-images/Lib_Floor2.svg"></object>
@@ -75,24 +80,29 @@
 						</div>
 				</div>
 			</div>
+			<!-- the mainContent div can be changed based on which embedded div you want to show, ex: carousel or about-text-container -->
 			<div class="col-9" id="mainContent">
 				<div id="carousel">
 					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 					  <ol class="carousel-indicators">
 						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 					  </ol>
 					  <div class="carousel-inner">
+					  <!--
 						<div class="carousel-item active">
 						  <img class="d-block w-100" src="main-images/brintonMain.png" alt="Second slide" onclick="window.location.href = 'brinton/nowShowing.html'">
 						</div>
 						<div class="carousel-item">
 						  <img class="d-block w-100" src="main-images/whitmanMain.png" alt="Third slide" onclick="window.location.href = 'whitman/index.html'">
 						</div>
-						<div class="carousel-item">
-						  <img class="d-block w-100" src="main-images/ideal.png" alt="Third slide">
+						-->
+						<div class="carousel-item active">
+						  <img class="d-block w-100" id="risingTogether" src="risingTogether/images/banner.jpg" alt="Third slide" onclick="window.location.href = 'risingTogether/index.html'">
 						</div>
 					  </div>
+					  <!--
 					  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
@@ -101,6 +111,7 @@
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					  </a>
+					  -->
 					</div>
 				</div>
 				<div id="about-text-container">
@@ -177,7 +188,7 @@
 				<!--
 				<div id="consultText">
 				</div>
-			-->
+				-->
 				<div id="pdh-text-container">
 					<div id="pdh-text">
 						<h2>The Public Digital Humanities</h2>
@@ -191,46 +202,45 @@
 		</div>
 	</div>
 
-	<!-- can use up to 12 columns and group in any way you want -->
-	<!-- 4 grid classes: .col- <> .col-sm- <> .col-md- <> .col-lg- <> .col-xl- (1200px) <> add a # after to show how many
-	columns it should take up with that size of screen -->
-	<!-- just use class col to let bootstrap make columns of equal width -->
-
-	<!-- default font-size is 16px, default line-height is 1.5, default font-family is "Helvetica Neue", Helvetica, Arial, sans-serif -->
-	<!-- all <p> elements have margin-top: 0 and margin-bottom: 1rem (16px by default) -->
-	<!-- use .display-1, .display-2, etc to display headers differently -->
-	<!-- <small> is used to make lighter, secondary text in any heading -->
-	<!-- <mark> yellow background and some padding -->
-	<!-- <abbr> element with a dotted border bottom -->
-	<!-- code for link button: <a href="#" class="btn" role="button">Link Button</a> -->
-	<!-- could possibly use card columns for the display projects page -->
 	<script>
-	
+
+	//lines 200-206 are to initialize popups and also make the popups dismiss on next click
+	$(function () {
+		$('[data-toggle="popover"]').popover()
+	})
+
+	$('.popover-dismiss').popover({
+		trigger: 'focus'
+	})
+
+	//this function updates the clock on the homescreen
 	function updateClock ( ) {
-	  var currentTime = new Date ( );
+		var currentTime = new Date ( );
 
-	  var currentHours = currentTime.getHours ( );
-	  var currentMinutes = currentTime.getMinutes ( );
+		var currentHours = currentTime.getHours ( );
+		var currentMinutes = currentTime.getMinutes ( );
 
-	  // Pad the minutes and seconds with leading zeros, if required
-	  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+		// Pad the minutes and seconds with leading zeros, if required
+		currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
 
-	  // Choose either "AM" or "PM" as appropriate
-	  var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+		// Choose either "AM" or "PM" as appropriate
+		var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
 
-	  // Convert the hours component to 12-hour format if needed
-	  currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+		// Convert the hours component to 12-hour format if needed
+		currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
 
-	  // Convert an hours component of "0" to "12"
-	  currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+		// Convert an hours component of "0" to "12"
+		currentHours = ( currentHours == 0 ) ? 12 : currentHours;
 
-	  // Compose the string for display
-	  var currentTimeString = currentHours + ":" + currentMinutes + " " + timeOfDay;
+		// Compose the string for display
+		var currentTimeString = currentHours + ":" + currentMinutes + " " + timeOfDay;
 
-	  // Update the time display
-	  document.getElementById("timeString").innerHTML = currentTimeString;
+
+		// Update the time display
+		document.getElementById("timeString").innerHTML = currentTimeString;
 	}
-	
+
+	//code to display the correct floor image based on the number 1-5 that is clicked
 	$("#floor-1").click(function() {
 		$("#touchscreen-main-floor-2, #touchscreen-main-floor-3, #touchscreen-main-floor-4, #touchscreen-main-floor-5").css({"display":"none"});
 		$("#floor-2, #floor-3, #floor-4, #floor-5").css({"color":"white"});
@@ -262,79 +272,78 @@
 		$("#touchscreen-main-floor-5").css({"display":"block"});
 	});
 
-		var logoBtn = document.getElementById('logo')
-        logoBtn.addEventListener('click', function() {
-			$('#projectCards').hide('slow');
-			$('#about-text-container').hide('slow');
-			//$('#consultText').hide('slow');
-			$('#pdh-text-container').hide('slow');
-            if($('#carousel').css('display') == 'none'){
-				$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
-				$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
-				$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
-				$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
-                $('#carousel').show('slow');
-            }
-        })
-		var abtBtn = document.getElementById('abtBtn')
-            abtBtn.addEventListener('click', function() {
-                $('#carousel').hide('slow');
-				$('#projectCards').hide('slow');
-				//$('#consultText').hide('slow');
-				$('#pdh-text-container').hide('slow');
-                if($('#about-text-container').css('display') == 'none'){
-					$('#abtBtn').css({"background-color": "white", "color": "#27a8e0"});
-					$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
-					$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
-					$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
-                    $('#about-text-container').show('slow');
-                }
-            })
-			var projBtn = document.getElementById('projBtn')
-            projBtn.addEventListener('click', function() {
-                $('#carousel').hide('slow');
-				$('#about-text-container').hide('slow');
-				//$('#consultText').hide('slow');
-				$('#pdh-text-container').hide('slow');
-                if($('#projectCards').css('display') == 'none'){
-					$('#projBtn').css({"background-color": "white", "color": "#27a8e0"});
-					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
-					$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
-					$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
-                    $('#projectCards').show('slow');
-                }
-            })
-						/*
-			var consultBtn = document.getElementById('consultBtn')
-            consultBtn.addEventListener('click', function() {
-                $('#carousel').hide('slow');
-				$('#about-text-container').hide('slow');
-				$('#projectCards').hide('slow');
-				$('#pdh-text-container').hide('slow');
-                if($('#consultText').css('display') == 'none'){
-					$('#consultBtn').css({"background-color": "white", "color": "#27a8e0"});
-					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
-					$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
-					$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
-                    $('#consultText').show('slow');
-                }
-            })
-						*/
-
-			var pdhBtn = document.getElementById('pdhBtn')
-            pdhBtn.addEventListener('click', function() {
-                $('#carousel').hide('slow');
-				$('#about-text-container').hide('slow');
-				$('#projectCards').hide('slow');
-				//$('#consultText').hide('slow');
-                if($('#pdh-text-container').css('display') == 'none'){
-					$('#pdhBtn').css({"background-color": "white", "color": "#27a8e0"});
-					$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
-					$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
-					$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
-                    $('#pdh-text-container').show('slow');
-                }
-            })
+	var logoBtn = document.getElementById('logo')
+	logoBtn.addEventListener('click', function() {
+		$('#projectCards').hide('slow');
+		$('#about-text-container').hide('slow');
+		//$('#consultText').hide('slow');
+		$('#pdh-text-container').hide('slow');
+		if($('#carousel').css('display') == 'none'){
+			$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#carousel').show('slow');
+		}
+	})
+	var abtBtn = document.getElementById('abtBtn')
+	abtBtn.addEventListener('click', function() {
+		$('#carousel').hide('slow');
+		$('#projectCards').hide('slow');
+		//$('#consultText').hide('slow');
+		$('#pdh-text-container').hide('slow');
+		if($('#about-text-container').css('display') == 'none'){
+			$('#abtBtn').css({"background-color": "white", "color": "#27a8e0"});
+			$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#about-text-container').show('slow');
+		}
+	})
+	var projBtn = document.getElementById('projBtn')
+	projBtn.addEventListener('click', function() {
+		$('#carousel').hide('slow');
+		$('#about-text-container').hide('slow');
+		//$('#consultText').hide('slow');
+		$('#pdh-text-container').hide('slow');
+		if($('#projectCards').css('display') == 'none'){
+			$('#projBtn').css({"background-color": "white", "color": "#27a8e0"});
+			$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#projectCards').show('slow');
+		}
+	})
+	/*
+	var consultBtn = document.getElementById('consultBtn')
+	consultBtn.addEventListener('click', function() {
+		$('#carousel').hide('slow');
+		$('#about-text-container').hide('slow');
+		$('#projectCards').hide('slow');
+		$('#pdh-text-container').hide('slow');
+		if($('#consultText').css('display') == 'none'){
+			$('#consultBtn').css({"background-color": "white", "color": "#27a8e0"});
+			$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#pdhBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#consultText').show('slow');
+		}
+	})
+	*/
+	var pdhBtn = document.getElementById('pdhBtn')
+	pdhBtn.addEventListener('click', function() {
+		$('#carousel').hide('slow');
+		$('#about-text-container').hide('slow');
+		$('#projectCards').hide('slow');
+		//$('#consultText').hide('slow');
+		if($('#pdh-text-container').css('display') == 'none'){
+			$('#pdhBtn').css({"background-color": "white", "color": "#27a8e0"});
+			$('#abtBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#projBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#consultBtn').css({"background-color": "#27a8e0", "color": "white"});
+			$('#pdh-text-container').show('slow');
+		}
+	})
 	</script>
 	</body>
 </html>

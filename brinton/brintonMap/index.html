@@ -35,8 +35,8 @@ Thanks to University of Iowa's Digital Scholarship and Publishing Studio for hos
     <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.2/esri-leaflet.js"></script>
     <!-- include json data points -->
     <!-- <script src="brintondata2.js"></script> -->
-	
-	<script src="../../inactiveStart.js"></script>
+
+	<script src="../../analytics_reset.js"></script>
 
 
 	  <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -90,8 +90,8 @@ Thanks to University of Iowa's Digital Scholarship and Publishing Studio for hos
   	</div> -->
 
     <script>
-		
-		
+
+
 	  	  var myIcon = L.icon({
         iconUrl: 'my-icon.png',
         iconRetinaUrl: 'my-icon@2x.png',
@@ -283,7 +283,7 @@ Thanks to University of Iowa's Digital Scholarship and Publishing Studio for hos
           range: false // gives it a bottom and a top slider
       });
 
-	
+
       map.addControl(sliderControl);
       sliderControl.startSlider(); // initialize
 
@@ -370,7 +370,7 @@ Thanks to University of Iowa's Digital Scholarship and Publishing Studio for hos
 //			"Modern Map": grayscale,
 //			"opengeo": opengeo
 			};
-	
+
 		//hides leaflet label
       $('.leaflet-control-attribution').hide();
 	  //L.control.layers(baseMaps, {collapsed:false}).addTo(map);
