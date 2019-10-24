@@ -8,10 +8,11 @@ let win
 function createWindow() {
 	// creates a new window
 	let win = new BrowserWindow({frame: false, fullscreen: true})
-	win.loadFile('index.html')
+    win.loadFile('index.html')
+    //win.webContents.openDevTools()
 
 	// used to switch between different project home pages in the timer
-    var pages = ['risingTogether/index.html']//temp taken out - 'brinton/nowShowing.html', 'whitman/index.html', 
+    var pages = ['brinton/nowShowing.html', 'whitman/index.html', 'risingTogether/index.html'] 
 
 	// different variables to help the timer run
     var t, openSwitch, closeSwitch;
