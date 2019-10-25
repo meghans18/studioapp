@@ -1,0 +1,21 @@
+.container-fluid {
+    /*margin-top: 8em;*/
+}
+
+p {
+  margin-top: 1em;
+  font-size: 14px;
+}
+
+body {
+  /*background-color: #c67a6c;*/
+}
+
+#banner {
+  border-radius: 25px;
+}
+
+h4 {
+  /*color: #2a3e56;*/
+  margin-top: 1em;
+}
