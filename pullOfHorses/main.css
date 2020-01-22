@@ -1,0 +1,140 @@
+@font-face {
+    font-family: gotham-book;
+    src: url(fonts/gotham-book.otf);
+  }
+
+@font-face {
+    font-family: gotham-bold;
+    src: url(fonts/Gotham-Bold.otf)
+}
+
+@font-face {
+    font-family: gotham-medium;
+    src: url(fonts/Gotham-Medium.otf)
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: gotham-book;
+    background-image: url(images/background_compressed.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    color: white;
+}
+
+.btn-group-vertical {
+    margin: 7rem 0rem;
+}
+
+.btn {
+    font-family: 'Petit Formal Script', cursive;
+    background-color:white;
+    color: black;
+    border-radius: 0px;
+    line-height: 3rem;
+    font-size: 2rem;
+}
+
+.btn:focus {
+    outline:none;
+    box-shadow: none;
+}
+
+#content-display, #aboutText, #events, #audio, #video, #illustrations {
+    display: none;
+}
+
+#audioBtn, #videoBtn, #illustrationBtn{
+    display: none;
+}
+#mainBtn{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.right-side-main{
+    margin-right:100px;
+    font-size: .9rem;
+}
+
+#back-icon{
+	height: 100px;
+    vertical-align: top;
+    float:right;
+    position: relative;
+    margin-top:40px;
+    margin-right: 40px;
+}
+
+.small-btn {
+    font-family: 'Petit Formal Script', cursive;
+    background-color: white;
+    color: black;
+    border-radius: 0px;
+    border:none;
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+.container-fluid{
+    padding: 0px 0px 50px 0px;
+}
+
+#left-sidebar{
+    background-color: #60919e;
+    opacity: 89%;
+    padding-top: 300px;
+    height: 2160px;;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+  }
+
+  #content-display{
+    background-color:black;
+    padding: 35px;
+    height: 40%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+
+.menu-image{
+    width: 100%;
+}
+
+#aboutText{
+    font-size: 1.45rem;
+}
+
+#content-display{
+    padding: 80px;
+
+}
+
+#logoBtn{
+    width: 90%;
+}
+
+#events h3{
+    font-family: gotham-bold; 
+    color:#f8b55c;
+    font-size: 1.6rem;
+}
+#events h4{
+    font-family: gotham-medium;
+    color: #60919e;
+    font-size: 1.4rem;
+}
+#events p{
+    font-family: gotham-book;
+    font-size: 1.3rem;
+}
