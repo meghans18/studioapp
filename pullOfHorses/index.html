@@ -88,10 +88,52 @@
 
                                 <!-- div corresponding to the The Maps button -->
                                 <div id="audio" class="right-side-main justify-content-left">
-                                    <button class="small-btn" onclick="window.location.href = 'whitmanMaps/alex/index.html'">Audio 1</button>
-                                    <button class="small-btn" onclick="window.location.href = 'whitmanMaps/alex/index.html'">Audio 2</button>
-                                    <button class="small-btn" onclick="window.location.href = 'whitmanMaps/stephanie/index.html'">Audio 3</button>
-                                </div>
+                                        <div id="carousel">
+                                                <div id="carouselExampleIndicators" class="carousel" data-ride="" data-interval="7500">
+                                                  <ol class="carousel-indicators">
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
+                            
+                                                  </ol>
+                                                  <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="audio-container">
+                                                                <img class="audio-image" src="audio_assets/ladies_cavalcade_800H.jpg"> 
+                                                        </div>
+                                                        <audio class="audio-element"id="cavalcade" src="audio_assets/Ladies Cavalcade Quick Step.mp3" controls>
+                                                            Your browser does not support the audio element.
+                                                        </audio>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="audio-container">
+                                                                <img class="audio-image" src="audio_assets/meadowbrook_foxtrot_800H.jpg">
+                                                            </div>
+                                                            <audio class="audio-element" id="meadowbrook"src="audio_assets/Meadowbrook Foxtrot.mp3" controls>
+                                                                Your browser does not support the audio element.
+                                                                </audio>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="audio-container">
+                                                                <img class="audio-image" src="audio_assets/morning_ride_800H.jpg">
+                                                            </div>
+                                                            <audio class="audio-element" id="morning-ride"src="audio_assets/The Morning Ride.mp3" controls>
+                                                                Your browser does not support the audio element.
+                                                                </audio>
+                                                    </div>
+                                                  </div>
+                                                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                  </a>
+                                                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                  </a>				  
+                                                </div>
+                                            </div>
+                                </div><!-- end of audio div -->
 
                                 <!-- div corresponding to the Faces of Whitman button -->
                                 <div id="video">
@@ -109,6 +151,15 @@
         </div>
 
         <script>
+
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
 
             var logoBtn = document.getElementById('logoBtn');
             logoBtn.addEventListener('click', function() {
