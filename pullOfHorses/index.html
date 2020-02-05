@@ -30,11 +30,11 @@
         <div class="container-fluid" style="height: 100%; width: 100%;">
                        
                         <div class="row">
-                            <div id="left-sidebar" class="col-4 justify-content-center text-center">
-                                <div class="col-12">
+                            <div id="left-sidebar" class="col-4">
+                                <div class="col-12 justify-content-center text-center">
                                    <img id="logoBtn" src="images/main_logo.png">
                                 </div>
-                              <div class="btn-group-vertical col-6 justify-content-center">
+                              <div class="btn-group-vertical col-12 justify-content-center">
                                   <img id="abtBtn" class="menu-image" src="menu/about.png">
                                   <img id="eventBtn" class="menu-image" src="menu/events.png" style="margin-top: 3rem;">
                                   <img id="audioBtn" class="menu-image" src="menu/audio.png" style="margin-top: 3rem;">
@@ -88,8 +88,9 @@
 
                                 <!-- div corresponding to the The Maps button -->
                                 <div id="audio" class="right-side-main justify-content-left">
+                                    <p><i style="color:#f8b55c;">Dr. Alan Huckleberry</i> UI Professor of Piano, recorded several horse-themed songs used in the video for which no other recordings currently exist.  The project would not have been the same without his generous collaboration.</p>
                                         <div id="carousel">
-                                                <div id="carouselExampleIndicators" class="carousel" data-ride="" data-interval="7500">
+                                                <div id="carouselExampleIndicators" class="carousel" data-ride="" data-interval="false">
                                                   <ol class="carousel-indicators">
                                                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                                                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -137,12 +138,15 @@
 
                                 <!-- div corresponding to the Faces of Whitman button -->
                                 <div id="video">
-                                    Video Grid
-                                </div>
+                                        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="400" src="https://www.youtube.com/embed/videoseries?controls=0&amp;list=PLaLWoNF6j2cnwASoTkuG9C-KYYY059J4l" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLaLWoNF6j2cnwASoTkuG9C-KYYY059J4l" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
 
-                                <!-- div corresponding to Illustrations -->
+                                         https://www.youtube.com/embed/DBXH9jJRaDk?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0                        
+                                         
+                                         </div><!--end of video div-->
+                                <!-- div corresponding to Illustrations | https://timmywil.com/panzoom/demo/ -->
                                 <div id="illustrations">
-                                        Illustrations
+
                                 </div>
                             </div><!-- end of content display div-->
                             </div>
@@ -151,24 +155,25 @@
         </div>
 
         <script>
-
-document.addEventListener('play', function(e){
-    var audios = document.getElementsByTagName('audio');
-    for(var i = 0, len = audios.length; i < len;i++){
-        if(audios[i] != e.target){
-            audios[i].pause();
-        }
-    }
-}, true);
+            document.addEventListener('play', function(e){
+                var audios = document.getElementsByTagName('audio');
+                for(var i = 0, len = audios.length; i < len;i++){
+                    if(audios[i] != e.target){
+                        audios[i].pause();
+                    }
+                }
+            }, true);
 
             var logoBtn = document.getElementById('logoBtn');
             logoBtn.addEventListener('click', function() {
                 $("#content-display, #aboutText, #events, #audio, #video, #illustrations").hide('slow')
+                    
+                    $('#abtBtn').attr("src","menu/about.png");
+                    $('#eventBtn').attr("src","menu/events.png");
+                    $('#audioBtn').attr("src","menu/audio.png");
+                    $('#videoBtn').attr("src","menu/video.png");
+                    $('#illustrationBtn').attr("src","menu/illustrations.png");
 
-                    $('#abtBtn').css({"border": "none"});
-                    $('#eventBtn').css({"border": "none"});
-                    $('#audioBtn').css({"border": "none"});
-                    $('#videoBtn').css({"border": "none"});
                 
             })
 
@@ -177,12 +182,16 @@ document.addEventListener('play', function(e){
                 $('#events').hide('slow')
                 $('#audio').hide('slow')
                 $('#video').hide('slow')
+                $('#illustrations').hide('slow')
 
                 if ($('#aboutText').css('display') == 'none') {
-                    $('#abtBtn').css({"border": "solid gold 1px"});
-                    $('#eventBtn').css({"border": "none"});
-                    $('#audioBtn').css({"border": "none"});
-                    $('#videoBtn').css({"border": "none"});
+                    $('#abtBtn').attr("src","menu_active/active_about.png");
+                    //$('#abtBtn').css({"border": "solid gold 2px"});
+                    $('#eventBtn').attr("src","menu/events.png");
+                    $('#audioBtn').attr("src","menu/audio.png");
+                    $('#videoBtn').attr("src","menu/video.png");
+                    $('#illustrationBtn').attr("src","menu/illustrations.png");
+
 
                     $('#content-display').show('slow')
                     $('#aboutText').show('slow');
@@ -195,12 +204,14 @@ document.addEventListener('play', function(e){
                 $('#aboutText').hide('slow')
                 $('#audio').hide('slow')
                 $('#video').hide('slow')
+                $('#illustrations').hide('slow')
 
                 if ($('#events').css('display') == 'none') {
-                    $('#eventBtn').css({"border": "solid gold 1px"});
-                    $('#abtBtn').css({"border": "none"});
-                    $('#audioBtn').css({"border": "none"});
-                    $('#videoBtn').css({"border": "none"});
+                    $('#eventBtn').attr("src","menu_active/active_events.png");
+                    $('#abtBtn').attr("src","menu/about.png");
+                    $('#audioBtn').attr("src","menu/audio.png");
+                    $('#videoBtn').attr("src","menu/video.png");
+                    $('#illustrationBtn').attr("src","menu/illustrations.png");
 
                     $('#events').show('slow');
                     $('#content-display').show('slow')
@@ -215,10 +226,11 @@ document.addEventListener('play', function(e){
                 $('#illustrations').hide('slow')
 
                 if ($('#audio').css('display') == 'none') {
-                    $('#audioBtn').css({"color": "black"});
-                    $('#abtBtn').css({"color": "black"});
-                    $('#eventBtn').css({"color": "black"});
-                    $('#videoBtn').css({"color": "black"});
+                    $('#eventBtn').attr("src","menu/events.png");
+                    $('#abtBtn').attr("src","menu/about.png");
+                    $('#audioBtn').attr("src","menu_active/active_audio.png");
+                    $('#videoBtn').attr("src","menu/video.png");
+                    $('#illustrationBtn').attr("src","menu/illustrations.png");
 
                     $('#audio').show('slow');
                     $('#content-display').show('slow')
@@ -243,22 +255,26 @@ document.addEventListener('play', function(e){
                 }
             })
             var illustrationBtn = document.getElementById('illustrationBtn');
-            videoBtn.addEventListener('click', function() {
+            illustrationBtn.addEventListener('click', function() {
                 $('#aboutText').hide('slow')
                 $('#events').hide('slow')
                 $('#audio').hide('slow')
                 $('#video').hide('slow')
 
                 if ($('#illustrations').css('display') == 'none') {
-                    $('#videoBtn').css({"color": "black"});
-                    $('#abtBtn').css({"color": "black"});
-                    $('#eventBtn').css({"color": "black"});
-                    $('#audioBtn').css({"color": "black"});
+                    $('#eventBtn').attr("src","menu/events.png");
+                    $('#abtBtn').attr("src","menu/about.png");
+                    $('#audioBtn').attr("src","menu/audio.png");
+                    $('#videoBtn').attr("src","menu/video.png");
+                    $('#illustrationBtn').attr("src","menu_active/active_illustrations.png");
+
 
                     $('#illustrations').show('slow');
                     $('#content-display').show('slow')
                 }
             })
+
+
         </script>
     </body>
 </html>

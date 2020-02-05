@@ -1,161 +1,245 @@
-@font-face {
-    font-family: gotham-book;
-    src: url(fonts/gotham-book.otf);
-  }
-
-@font-face {
-    font-family: gotham-bold;
-    src: url(fonts/Gotham-Bold.otf)
+body {
+	font-family: 'Montserrat', sans-serif;
 }
 
-@font-face {
-    font-family: gotham-medium;
-    src: url(fonts/Gotham-Medium.otf)
+.container {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	margin: auto;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    font-family: gotham-book;
-    background-image: url(images/background_compressed.jpg);
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
-    color: white;
-}
-
-.btn-group-vertical {
-    margin: 7rem 0rem;
+.row {
+	margin-top: 20px;
+	margin-left: 5px;
+	overflow: hidden;
 }
 
 .btn {
-    font-family: 'Petit Formal Script', cursive;
-    background-color:white;
-    color: black;
-    border-radius: 0px;
-    line-height: 3rem;
-    font-size: 2rem;
+	border-radius: 0px;
+	background-color: #27a8e0;
+	color: white;
+	font-size: 1.5rem;
+	border: .5rem solid #27a8e0;
 }
 
-.btn:focus {
-    outline:none;
-    box-shadow: none;
+.infoIcon {
+	transform: translateY(25%);
+	width: 30px;
+	border: none;
+	outline: none;
+	padding: 0px;
 }
 
-#content-display, #aboutText, #events, #audio, #video, #illustrations {
-    display: none;
+#btnContainer.active {
+	background-color: #00bfff;
+	color: white;
+	border: none;
+	outline: none;
 }
 
-#videoBtn, #illustrationBtn{
-    display: none;
-}
-#mainBtn{
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.right-side-main{
-    font-size: .9rem;
-}
-
-#back-icon{
+#logo {
+	display: block;
 	height: 100px;
-    position: absolute;
-    margin-top:40px;
-    margin-left: 93%;
-    z-index: 1000;
+	margin: 0 auto;
+	padding: 0px;
 }
 
-.small-btn {
-    font-family: 'Petit Formal Script', cursive;
-    background-color: white;
-    color: black;
-    border-radius: 0px;
-    border:none;
-    line-height: 1.5rem;
-    font-size: 1rem;
+#side-box {
+	overflow: hidden;
+	background-color: black;
+	height:925px;
 }
 
-.container-fluid{
-    padding: 0px 0px 50px 0px;
+#side-time p {
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+	font-size: 4rem;
+	color: white;
 }
 
-#left-sidebar{
-    background-color: #60919e;
-    opacity: 89%;
-    padding-top: 300px;
-    height: 2160px;;
+#side-calendar {
+	background-color: white;
+	height:40%;
 }
 
-.vertical-center {
-    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
-    display: flex;
-    align-items: center;
-  }
-
-  #content-display{
-    background-color:black;
-    padding: 80px;
-    height: 45%;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
+#side-calendar p {
+	color: black;
+	font-weight: 600;
+	font-size: 1.65rem;
+	padding-top: 5px;
 }
 
-.menu-image{
-    width: 100%;
+#side-text p {
+	color: white;
+	font-weight: 600;
+	font-size: 1.65rem;
+	padding-top: 5px;
 }
 
-#aboutText{
-    font-size: 1.45rem;
+#side-map {
+	background-color: #27a8e0;
+	height: 38%;
 }
 
-#logoBtn{
-    width: 90%;
+#side-map p {
+	margin-top: -1.5rem;
 }
 
-#events h3{
-    font-family: gotham-bold; 
-    color:#f8b55c;
-    font-size: 1.6rem;
+#mainContent {
+	overflow-y: auto;
+	height: 925px;
 }
 
-#events h4{
-    font-family: gotham-medium;
-    color: #60919e;
-    font-size: 1.4rem;
+.btn:focus{
+	outline:none;
+	box-shadow:none;
+}
+.btn:hover {
+	color: white;
 }
 
-#events p{
-    font-family: gotham-book;
-    font-size: 1.3rem;
+#about-text-container, .event-description {
+	display: none;
+}
+#about-text-container{
+	/*background-image:url('main-images/about-background.jpg');*/
+	height: 100%;
+}
+#about-text{
+	padding:40px;
+	margin:40px;
+	color:white;
+	background-color:rgba(0, 0, 0, 0.5);
+	position: relative;
+	top: 40px;
+}
+#consultText {
+	display: none;
+}
+#pdh-text-container {
+	display: none;
+	height: 100%;
+}
+#pdh-text{
+	padding:40px;
+	margin:40px;
+	color:white;
+	background-color:rgba(0, 0, 0, 0.5);
+	position: relative;
+	top: 40px;
+}
+.event{
+	margin-top: 15px;
+	height: 75px;
+	font-size: .7rem;
+}
+.event-date{
+	float: left;
+	font-weight: 600;
+	clear: both;
+}
+.event-info{
+	float: left;
+	clear: right;
+	text-align: left;
 }
 
-.audio-image{
-    width:65%;
+.carousel-item {
+	height: 925px;
 }
 
-.audio-element{
-    text-align:center;
-    width: 100%;
-    z-index: 1000;
+#risingTogether {
+	/*margin-top: 235px;*/
 }
 
-.audio-container{
-    text-align: center;
+#projectCards {
+	display: none;
+	overflow: hidden;
 }
 
-#audio .right-side-main{
-    margin-right:0px;
+.card-deck {
+	margin-bottom: 1rem;
 }
 
-.carousel-indicators{
-    bottom:-35px;
+::-webkit-scrollbar {
+	display: none;
+}
+.floor-maps{
+	display: none;
+}
+#touchscreen-main-floor-1,
+#touchscreen-main-floor-2,
+#touchscreen-main-floor-3,
+#touchscreen-main-floor-4,
+#touchscreen-main-floor-5 {
+	width: 90%;
+	text-align: center;
+	margin-top: -0.5rem;
+	margin-left: 1.2rem;
+}
+.floor-text{
+	color: white;
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
 }
 
-.carousel-control-prev, .carousel-control-next{
-    height:90%;
+.floor-text span {
+	padding-left: 1rem;
+}
+#flash-content{
+	height: 200px!important;
+	width:200px!important;
+}
+
+/*media queries in css*/
+@media only screen and (max-width: 380px) {
+
+
+}
+
+@media only screen and (min-width: 381px) and (max-width: 480px) {
+}
+
+@media only screen and (min-width: 481px) and (max-width: 700px) {
+}
+
+@media only screen and (min-width: 701px)
+and (max-width: 819px) {
+
+}
+@media only screen and (min-width: 820px)
+and (max-width: 980px) {
+
+}
+
+@media only screen and (min-width: 981px)
+and (max-width: 1349px) {
+
+}
+
+@media only screen and (min-width: 1350px)
+and (max-width: 2399px) {
+
+}
+
+@media only screen and (min-width: 2400px)
+and (max-width: 5000px) {
+
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+@media all and (-ms-high-contrast: none),
+       (-ms-high-contrast: active) {
+    /*IE10+ CSS styles go here*/
+
 }
