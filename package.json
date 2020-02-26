@@ -18,5 +18,8 @@
   "homepage": "https://github.com/meghans18/studioapp#readme",
   "devDependencies": {
     "electron": "^4.2.9"
+  },
+  "dependencies": {
+    "@panzoom/panzoom": "^4.0.3"
   }
 }

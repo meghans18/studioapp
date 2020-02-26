@@ -20,6 +20,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnapisec.kaltura.com/p/2458762/sp/245876200/embedIframeJs/uiconf_id/43845241/partner_id/2458762"></script>
+        <script src="../node_modules/@panzoom/panzoom/dist/panzoom.js"></script>
         <script src="../analytics_reset.js"></script>
         
 		<script>if (window.module) module = window.module;</script>
@@ -88,7 +90,6 @@
 
                                 <!-- div corresponding to the The Maps button -->
                                 <div id="audio" class="right-side-main justify-content-left">
-                                    <p><i style="color:#f8b55c;">Dr. Alan Huckleberry</i> UI Professor of Piano, recorded several horse-themed songs used in the video for which no other recordings currently exist.  The project would not have been the same without his generous collaboration.</p>
                                         <div id="carousel">
                                                 <div id="carouselExampleIndicators" class="carousel" data-ride="" data-interval="false">
                                                   <ol class="carousel-indicators">
@@ -136,25 +137,183 @@
                                             </div>
                                 </div><!-- end of audio div -->
 
-                                <!-- div corresponding to the Faces of Whitman button -->
+                                <!-- div corresponding to the Videos button -->
                                 <div id="video">
-                                        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="400" src="https://www.youtube.com/embed/videoseries?controls=0&amp;list=PLaLWoNF6j2cnwASoTkuG9C-KYYY059J4l" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLaLWoNF6j2cnwASoTkuG9C-KYYY059J4l" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
-
-                                         https://www.youtube.com/embed/DBXH9jJRaDk?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0                        
+                                        <!-- <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="400" src="https://www.youtube.com/embed/videoseries?controls=0&amp;list=PLaLWoNF6j2cnwASoTkuG9C-KYYY059J4l" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLaLWoNF6j2cnwASoTkuG9C-KYYY059J4l" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->        
                                          
-                                         </div><!--end of video div-->
+                                
+                                </div><!--end of video div-->
                                 <!-- div corresponding to Illustrations | https://timmywil.com/panzoom/demo/ -->
                                 <div id="illustrations">
+                                    <div class="row" style="height: 600px;">
+                                        <div class="col-6">
 
+                                            <div id="theatreCarousel" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div data-toggle="modal" data-target="#barnumImage">
+                                                            <img width="100%" src="images\illustrations\theatre\Barnum's Ring of Fire greatest_show_on_earth_Daring_and_dangerous_equestrian_act_...jpg">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div data-toggle="modal" data-target="#benHurImage">
+                                                            <img width="100%" src="images\illustrations\theatre\Ben_Hur_Broadway2.jpg">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div data-toggle="modal" data-target="#ringlingImage">
+                                                            <img width="100%" src="images\illustrations\theatre\Flickr_-_…trialsanderrors_-_Madam_Ada_Castello_and_Jupiter,_poster_for_Ringling_Brothers,_ca._1899.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="carousel-control-prev" href="#theatreCarousel" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#theatreCarousel" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div style="height: 575px;" class="col-6">
+                                            <div style="margin-top: 80%;" id="magazineCarousel" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div data-toggle="modal" data-target="#brightonImage">
+                                                            <img width="100%" src="images\illustrations\magazine\Brighton Beach Parade_cropandlighten_smaller.jpg">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div data-toggle="modal" data-target="#carriageImage">
+                                                            <img width="100%" src="images\illustrations\magazine\Carriage Drive in Central Park 1860 copy_smaller.jpg">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div data-toggle="modal" data-target="#harpersImage">
+                                                            <img width="100%" src="images\illustrations\magazine\Figure 4 MSG Interior Harper's 1890_sepia.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="carousel-control-prev" href="#magazineCarousel" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#magazineCarousel" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" >
+                                        <div class="col-6">
+                                            <h2 class="text-center" style="margin-top: 1em;">THEATRE POSTERS</h1>
+                                        </div>
+                                        <div class="col-6">
+                                            <h2 class="text-center" style="margin-top: 1em;">MAGAZINE ILLUSTRATIONS</h1>
+                                        </div>
+                                    </div>
                                 </div>
                             </div><!-- end of content display div-->
                             </div>
+                        </div>
+                        <div class="modal" aria-hidden="true" id="barnumImage">
+                            <img style="margin-left: 43%; margin-top: 17%;" width="301" height="432" src="images\illustrations\theatre\Barnum's Ring of Fire greatest_show_on_earth_Daring_and_dangerous_equestrian_act_...jpg">
+                        </div>
+                        <div class="modal" aria-hidden="true" id="benHurImage">
+                            <img style="margin-left: 43%; margin-top: 17%;" width="301" height="432" src="images\illustrations\theatre\Ben_Hur_Broadway2.jpg">
+                        </div>
+                        <div class="modal" aria-hidden="true" id="ringlingImage">
+                            <img style="margin-left: 43%; margin-top: 17%;" width="301" height="432" src="images\illustrations\theatre\Flickr_-_…trialsanderrors_-_Madam_Ada_Castello_and_Jupiter,_poster_for_Ringling_Brothers,_ca._1899.jpg">
+                        </div>
+                        <div class="modal" aria-hidden="true" id="brightonImage">
+                            <img style="margin-left: 43%; margin-top: 17%;" width="323" height="232" src="images\illustrations\magazine\Brighton Beach Parade_cropandlighten_smaller.jpg">
+                        </div>
+                        <div class="modal" aria-hidden="true" id="carriageImage">
+                            <img style="margin-left: 43%; margin-top: 17%;" width="323" height="232" src="images\illustrations\magazine\Carriage Drive in Central Park 1860 copy_smaller.jpg">
+                        </div>
+                        <div class="modal" aria-hidden="true" id="harpersImage">
+                            <img style="margin-left: 43%; margin-top: 17%;" width="323" height="232" src="images\illustrations\magazine\Figure 4 MSG Interior Harper's 1890_sepia.jpg">
                         </div>
 
         </div>
 
         <script>
+            kWidget.embed({
+                'targetId': 'video',
+                'wid': '0_p5n624pv',
+                'uiconf_id': '43845241',
+                'entry_id': '0_vxdeuukm'
+            });
+
+            // for barnam's
+            const barnum = document.getElementById('barnumImage')
+            const panzoom = Panzoom(barnum, {
+                bounds: true,
+                boundsPadding: 0.1,
+                maxScale: 10
+            })
+            panzoom.pan(10, 10)
+            panzoom.zoom(2, { animate: true })
+            barnum.parentElement.addEventListener('wheel', panzoom.zoomWithWheel)
+
+            // for ben hur
+            const benHur = document.getElementById('benHurImage')
+            const panzoom2 = Panzoom(benHur, {
+                bounds: true,
+                boundsPadding: 0.1,
+                maxScale: 10
+            })
+            panzoom2.pan(10, 10)
+            panzoom2.zoom(2, { animate: true })
+            benHur.parentElement.addEventListener('wheel', panzoom2.zoomWithWheel)
+
+            // for ringlingImage
+            const ringling = document.getElementById('ringlingImage')
+            const panzoom3 = Panzoom(ringling, {
+                bounds: true,
+                boundsPadding: 0.1,
+                maxScale: 10
+            })
+            panzoom3.pan(10, 10)
+            panzoom3.zoom(2, { animate: true })
+            ringling.parentElement.addEventListener('wheel', panzoom3.zoomWithWheel)
+
+            // for brightonImage
+            const brighton = document.getElementById('brightonImage')
+            const panzoom4 = Panzoom(brighton, {
+                bounds: true,
+                boundsPadding: 0.1,
+                maxScale: 10
+            })
+            panzoom4.pan(10, 10)
+            panzoom4.zoom(2, { animate: true })
+            brighton.parentElement.addEventListener('wheel', panzoom4.zoomWithWheel)
+
+            // for carriageImage
+            const carriage = document.getElementById('carriageImage')
+            const panzoom5 = Panzoom(carriage, {
+                bounds: true,
+                boundsPadding: 0.1,
+                maxScale: 10
+            })
+            panzoom5.pan(10, 10)
+            panzoom5.zoom(2, { animate: true })
+            carriage.parentElement.addEventListener('wheel', panzoom5.zoomWithWheel)
+
+            // for harpersImage
+            const harpers = document.getElementById('harpersImage')
+            const panzoom6 = Panzoom(harpers, {
+                bounds: true,
+                boundsPadding: 0.1,
+                maxScale: 10
+            })
+            panzoom6.pan(10, 10)
+            panzoom6.zoom(2, { animate: true })
+            harpers.parentElement.addEventListener('wheel', panzoom6.zoomWithWheel)
+
             document.addEventListener('play', function(e){
                 var audios = document.getElementsByTagName('audio');
                 for(var i = 0, len = audios.length; i < len;i++){
