@@ -47,7 +47,7 @@ html, body {
     display: none;
 }
 
-#videoBtn, #illustrationBtn{
+#videoBtn {
     display: none;
 }
 #mainBtn{
@@ -84,7 +84,7 @@ html, body {
 #left-sidebar{
     background-color: #60919e;
     opacity: 89%;
-    padding-top: 300px;
+    padding-top: 150px;
     height: 2160px;;
 }
 
